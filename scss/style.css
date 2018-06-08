@@ -81,6 +81,9 @@ header img {
   margin: 0 auto;
 }
 
+header {
+  margin-bottom: 30px;
+}
 header .header {
   background: #fff;
   display: flex;
@@ -193,7 +196,6 @@ header h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 30px;
   margin-bottom: 95px;
 }
 .num ul li {
@@ -503,4 +505,54 @@ footer .footer-dwn small {
   margin-right: 20px;
   padding: 35px;
   float: right;
+}
+
+.phase {
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+  margin: 0 auto 95px;
+  position: relative;
+}
+.phase .arrow {
+  box-sizing: border-box;
+  display: table-cell;
+  color: #e87d0c;
+  background: rgba(232, 125, 12, 0.3);
+  position: relative;
+  width: 30px;
+}
+.phase .arrow:after {
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  position: absolute;
+  border: 35px solid transparent;
+  border-top-color: #e87d0c;
+  opacity: 0.3;
+  bottom: -70px;
+  left: 0;
+}
+.phase .arrow .step {
+  position: absolute;
+  top: 45%;
+  left: 20px;
+}
+.phase .arrow .no {
+  position: absolute;
+  top: 50%;
+  left: 35px;
+}
+.phase div {
+  padding: 40px;
+}
+
+.married h3 {
+  width: 980px;
+  color: #8f8f8f;
+  font-family: 'Sawarabi Mincho';
+  font-size: 1em;
+  text-align: center;
+  margin: 0 auto 70px;
+  line-height: 1.5;
 }

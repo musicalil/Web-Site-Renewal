@@ -92,6 +92,7 @@ header img{
     margin: 0 auto;
 }
 header{
+    margin-bottom: 30px;
 .header{//ヘッダーメニュー
         background: #fff;
         display: flex;
@@ -208,7 +209,6 @@ header{
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-top: 30px;
         margin-bottom: 95px;
         li{
             width: 250px;
@@ -532,29 +532,59 @@ footer{
 //---------------------------共通----------------------------------//
 
 //-------------------------married.html----------------------------//
+//変数
+$gr: #8f8f8f;
 
-//section{
-//    display: flex;
-//    justify-content: space-between;
-//    width: 980px;
-//    .arrow{
-//        background: $or;
-//        position: relative;
-//        width: 70px;
-//        &:after{
-//            content: "";
-//            display: block;
-//            position: absolute;
-//            border: 35px solid transparent;
-//            border-top-color: $or;
-//            bottom: -70px;
-//            left: 0;
-//        }
-//        div{
-//            margin: 0 auto;
-//        }
-//    }
-//}
+.phase{//step
+    display: flex;
+    justify-content: space-between;
+    width: 980px;
+    margin: 0 auto 95px;
+    position: relative;
+    .arrow{//矢印
+        box-sizing: border-box;
+        display: table-cell;
+        color: $or;
+        background: rgba(232, 125, 12, 0.3);
+        position: relative;
+        width: 30px;
+//        padding-right: 25px;
+        &:after{//矢印先端
+            box-sizing: border-box;
+            content: "";
+            display: block;
+            position: absolute;
+            border: 35px solid transparent;
+            border-top-color: $or;
+            opacity: 0.3;
+            bottom: -70px;
+            left: 0;
+        }//after
+        .step{
+            position: absolute;
+            top: 45%;
+            left: 20px;
+        }
+        .no{
+            position: absolute;
+            top: 50%;
+            left: 35px;
+        }
+    }//.arrow
+    div{
+            padding: 40px;
+        }
+}//.phase
+
+.married h3{
+            width: 980px;
+            color: $gr;
+            font-family: 'Sawarabi Mincho';
+            font-size: 1em;
+//            font-weight: bold;
+            text-align: center;
+            margin: 0 auto 70px;
+            line-height: 1.5;
+}
 
 //-------------------------married.html----------------------------//
-
