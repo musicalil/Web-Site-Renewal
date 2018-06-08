@@ -1,0 +1,9 @@
+AuthUserFile /home/users/1/main.jp-73558350f3dcccaf/web/jms/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Secret Area"
+AuthType Basic
+require valid-user
+
+<Files ~ "^.(htpasswd|htaccess)$">
+    deny from all
+</Files>

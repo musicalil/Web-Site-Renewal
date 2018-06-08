@@ -1,0 +1,5 @@
+[2018-06-01 03:46:55] layer "index.html": Unsupported extension: html
+[2018-06-01 03:46:55] layer "Mr.Sai.jpg, 200% Mr.Sai@2x.jpg": Duplicate path: Mr.Sai.jpg
+[2018-06-01 03:46:55] layer "Mr.Sai.jpg, 200% Mr.Sai@2x.jpg": Duplicate path: Mr.Sai@2x.jpg
+[2018-06-01 03:47:57] layer "main2-2.png, 200% main2-2@2x.png": Duplicate path: main2-2.png
+[2018-06-01 03:47:57] layer "main2-2.png, 200% main2-2@2x.png": Duplicate path: main2-2@2x.png
