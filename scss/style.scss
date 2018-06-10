@@ -57,24 +57,28 @@ table {
 
 //変数
 
-$rd: #ff0000;
-$bl: #1f4fa4;
-$or: #e87d0c;
-$bk: #2d2d2d;
+$red: #ff0000;
+$blue: #1f4fa4;
+$orange: #e87d0c;
+$black: #2d2d2d;
+$gray: #8f8f8f;
 
 //フォント
 @font-face {
-  font-family: "YuGothic M";
-  src: local("Yu Gothic Medium");
+  font-family: 'YuGothic M';
+  src: local('Yu Gothic Medium');
 }
 @font-face{
-    font-family: "noto";
+    font-family: "NotoSansCJK-Regular";
     src: url("../fonts/NotoSansCJKjp-Regular.eot")format('eot'),url("../fonts/NotoSansCJKjp-Regular.woff")format('woff');
 }
 body{//body
-    font-family: 'Kameron', 'noto', 'Verdana', 'Arial', '游ゴシック Medium', '游ゴシック体', 'YuGothic', 'YuGothic M','メイリオ', 'Meiryo', 'ヒラギノ角ゴシック', 'Hiragino Sans', 'Roboto', 'Droid Sans', 'sans-serif';
-    counter-reset: section;
+    font-family: 'Kameron', 'NotoSansCJK-Regular', 'Verdana', 'Arial', '游ゴシック Medium', '游ゴシック体', 'YuGothic', 'YuGothic M','メイリオ', 'Meiryo', 'ヒラギノ角ゴシック', 'Hiragino Sans', 'Roboto', 'Droid Sans', 'sans-serif';
 }
+//フォント変数
+$serif: 'Kameron';
+$gothic: 'NotoSansCJK-Regular';
+$mincho: 'Sawarabi Mincho';
 
 .container{//全体
     width: 100%;
@@ -120,7 +124,7 @@ header{
                 }//&:last-child
                  a{
                     height: 19px;
-                    color: $bk;
+                    color: $black;
                     display: block;
                     line-height: 19px;
                     font-size: 85%;
@@ -145,9 +149,9 @@ header{
             width: 150px;
             height: 30px;
             line-height: 30px;
-            font-family: 'noto';
+            font-family: $gothic;
             font-weight: bold;
-            background: $bl;
+            background: $blue;
             .telicon{
                 font-size: 80%;
                 padding-right: 5px;
@@ -159,7 +163,7 @@ header{
             line-height: 30px;
             margin-left: 16px;
             color: #fff;
-            background: $bl;
+            background: $blue;
             display: block;
             .mailicon{
                 padding-right: 5px; 
@@ -168,7 +172,7 @@ header{
                 font-weight: bold;
                 border-radius: 8px;
                 background: #fff;
-                color: $bl;
+                color: $blue;
                 padding: 0 8px;
                 margin-right: 5px;
             }//span
@@ -177,7 +181,7 @@ header{
     }//.header
     h2{
         position: absolute;
-        font-family: 'Sawarabi Mincho';
+        font-family: $mincho;
         font-size: 220%;
         color: #fff;
         top: 50%;
@@ -295,11 +299,11 @@ main{
             font-size: 3em;
             font-weight: bold;
             text-align: center;
-            color: $rd;
+            color: $red;
             line-height: 1.5em;
         }//h3
         h4{
-            font-family: 'Sawarabi Mincho';
+            font-family: $mincho;
             font-size: 1em;
             font-weight: bold;
             text-align: center;
@@ -318,7 +322,7 @@ main{
                         line-height: 1.5;
                     span{
                         font-size: 1.9em;
-                        color: $bl;
+                        color: $blue;
                     }//span
                   }//p
                 }//li
@@ -349,11 +353,12 @@ main{
             width: 980px;
             margin: 0 auto 95px;
             position: relative;
+            counter-reset: section;
             h3{
                 font-size: 3em;
                 font-weight: bold;
                 text-align: center;
-                color: $rd;
+                color: $red;
                 margin-bottom: 45px;
             }//h3
             ul{
@@ -361,7 +366,7 @@ main{
                 li{
                     display: flex;
                     justify-content: space-between;
-                    border: 0.5px solid $bl;
+                    border: 0.5px solid $blue;
                     border-radius: 5px;
                     padding: 40px;
                     margin: 90px auto 50px;
@@ -381,13 +386,13 @@ main{
                                 height: 60px;
                                 border-radius: 50%;
                                 color: #fff;
-                                background: $or;
+                                background: $orange;
                                 line-height: 1.3;
                             }//before
                         h4{
                             font-size: 150%;
                             font-weight: bold;
-                            color: $or;
+                            color: $orange;
                             margin-bottom: 30px;
                         }//h4
                         p{
@@ -422,7 +427,7 @@ main{
                 background: #1f4fa4;
                 text-align: center;
                 padding: 22px 0;
-                font-family: 'Sawarabi Mincho';
+                font-family: $mincho;
                 font-size: 1.4em;
                 letter-spacing: 3px;
             }//a
@@ -451,7 +456,7 @@ footer{
             font-size: 70%;
             .top{
                 font-size: 1.8em;
-                color: $bk;
+                color: $black;
                 padding-bottom: 5px;
             }//.top
         }//a
@@ -467,7 +472,7 @@ footer{
             .fb{
                 display: block;
                 font-size: 45px;
-                color: $bl;
+                color: $blue;
                 width: 150px;
                 height: 45px;
                 text-align: center;
@@ -532,59 +537,130 @@ footer{
 //---------------------------共通----------------------------------//
 
 //-------------------------married.html----------------------------//
-//変数
-$gr: #8f8f8f;
-
-.phase{//step
-    display: flex;
-    justify-content: space-between;
-    width: 980px;
+.page2, .page3{//h2
+    color: $black;
+}
+.married{//main
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto 95px;
-    position: relative;
-    .arrow{//矢印
-        box-sizing: border-box;
-        display: table-cell;
-        color: $or;
-        background: rgba(232, 125, 12, 0.3);
-        position: relative;
-        width: 30px;
-//        padding-right: 25px;
-        &:after{//矢印先端
-            box-sizing: border-box;
-            content: "";
-            display: block;
-            position: absolute;
-            border: 35px solid transparent;
-            border-top-color: $or;
-            opacity: 0.3;
-            bottom: -70px;
-            left: 0;
-        }//after
-        .step{
-            position: absolute;
-            top: 45%;
-            left: 20px;
-        }
-        .no{
-            position: absolute;
-            top: 50%;
-            left: 35px;
-        }
-    }//.arrow
-    div{
-            padding: 40px;
-        }
-}//.phase
-
-.married h3{
-            width: 980px;
-            color: $gr;
-            font-family: 'Sawarabi Mincho';
+    counter-reset: count;
+        .intro{
+            color: $gray;
+            font-family: $mincho;
             font-size: 1em;
-//            font-weight: bold;
             text-align: center;
             margin: 0 auto 70px;
             line-height: 1.5;
+    }
+        h3{
+        font:{
+            family: $gothic;
+            size: 1.8em;
+            text-align: left;
+        }
+        margin-bottom: 40px;
+    }
 }
+
+.phase{//section
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0 auto 95px;
+    position: relative;
+        &:before{//矢印
+            content: "";
+            width: 70px;
+            background: $orange;
+            opacity: 0.3;
+        }
+        &:after{//矢印先端
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 35px 35px 0 35px;
+            border-color: #e87e0c transparent transparent transparent;
+            line-height: 0px;
+            _border-color: #e87e0c #000000 #000000 #000000;
+            _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+            opacity: 0.3;
+            bottom: -35px;
+            left: 0;
+        }//after
+}//.phase
+    .phase h4{//step
+            font:{
+                family: $gothic;
+                size: 2.4em;
+            }
+            color: $orange;
+            text-align: center;
+            position: absolute;
+            top: 15%;
+            left: 15px;
+            span{//STEP
+                font:{
+                    size: 40%;
+                    weight: bold;
+                }
+                letter-spacing: 1.2px;
+                &:after{//改行
+                    content: "\A";
+                    white-space: pre;
+                }
+            }
+        }//h4
+    .phase dl{//説明
+            width: 640px;
+            padding: 40px;
+            position: relative;
+            font-family: $gothic;
+            dt{
+                font:{
+                    size: 1.5em;
+                    weight: bold;
+                }
+                color: $black;
+                padding-left: 60px;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 25px;
+                    left: 0;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background: $orange;
+                    margin-left: 40px;
+                }//dt:before
+            }//.dt
+            dd{
+                color: $gray;
+                font:{
+                    size: 0.9em;
+                    weight: thin;
+                }
+                padding: 30px;
+                line-height: 2;
+                letter-spacing: 0.2;
+            }//dd
+        }//dl
+.phase dl{//step2
+    position: relative;
+    .count{//カウンター関数
+        &:before{
+            counter-increment: count;
+            content: counter(count);
+            position: absolute;
+            color: #fff;
+            text-align: center;
+            line-height: 2;
+        }
+    }
+}
+
 
 //-------------------------married.html----------------------------//
