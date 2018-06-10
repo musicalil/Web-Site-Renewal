@@ -382,20 +382,21 @@ main .main2 ul li div p {
 main .main2 ul li div .m3 {
   padding-top: 25px;
 }
-main .contact {
+
+aside {
   width: 980px;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 auto 95px;
 }
-main .contact div {
+aside div {
   padding-right: 72px;
 }
-main .contact div:last-child {
+aside div:last-child {
   padding-right: 0;
   padding-left: 72px;
 }
-main .contact div a {
+aside div a {
   width: 240px;
   display: inline-block;
   color: #fff;

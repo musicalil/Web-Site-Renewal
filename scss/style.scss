@@ -406,34 +406,34 @@ main{
             }//li
         }//ul
     }//.main2
+}//main
 //---------------------------index.html----------------------------//
     
 //---------------------------共通----------------------------------//    
-    .contact{
-        width: 980px;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        div{
-            padding-right: 72px;
-            &:last-child{
-                padding-right: 0;
-                padding-left: 72px;
-            }//div:last-child
-            a{
-                width: 240px;
-                display: inline-block;
-                color: #fff;
-                background: #1f4fa4;
-                text-align: center;
-                padding: 22px 0;
-                font-family: $mincho;
-                font-size: 1.4em;
-                letter-spacing: 3px;
-            }//a
-        }//div
-    }//.contact
-}//main
+aside{
+    width: 980px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 95px;
+    div{
+        padding-right: 72px;
+        &:last-child{
+            padding-right: 0;
+            padding-left: 72px;
+        }//div:last-child
+        a{
+            width: 240px;
+            display: inline-block;
+            color: #fff;
+            background: #1f4fa4;
+            text-align: center;
+            padding: 22px 0;
+            font-family: $mincho;
+            font-size: 1.4em;
+            letter-spacing: 3px;
+        }//a
+    }//div
+}//aside
 
 footer{
     width: 100%;
