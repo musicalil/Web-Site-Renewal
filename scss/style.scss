@@ -664,8 +664,214 @@ footer{
 
 //-------------------------married.html----------------------------//
 
-//-------------------------ryoukin.html----------------------------//
+//-------------------------price.html----------------------------//
 
+.price{//main
+    max-width: 1200px;
+    width: 100%;
+    margin: 95px auto;
+    font-family: $gothic;
+    h3{
+        width: 100%;
+        position: relative;
+        text-align: center;
+        display: inline-block;
+        margin-bottom: 95px;
+        color: $black;
+        font:{ 
+            size: 2em;
+        }
+//        以下で線を表示
+        &:before{
+            content: "";
+            position: absolute;
+            bottom: -1em;//線の上下位置
+            left: 50%;
+            display: inline-block;
+            width: 60px;//線の長さ
+            height: 2px;//線の太さ
+            -moz-transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);//位置調整
+            background: $red;
+        }//h3:before
+    }//h3
+}//.price
 
+.price dl{//料金dl
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    letter-spacing: 1.2px;
+    border: 1px solid $orange;
+    background: $orange;
+    margin: 0 auto;
+    dt{
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        font-size: 2em;
+        color: #fff;
+        background: $orange;
+        padding: 20px;
+        position: relative;
+        strong{
+            display: inline-block;
+            padding-left: 100px;
+            font:{
+                size: 1.3em;
+                weight: bold;
+            }
+          }//strong
+        span{
+            display: inline-block;
+            font-size: 0.6em;
+            font-weght: bold;
+        }//span
+        a{
+            display: block;
+            color: #fff;
+            background: rgba(232, 125, 12, 0.3);
+            font-size: 0.6em;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 15px 20px;
+            .plus{
+                display: inline-block;
+                padding: 0 10px;
+                font-size: 1.5em;
+            }//.plan
+        }//a
+    }//dt
+}//.price dl
 
-//-------------------------ryoukin.html----------------------------//
+.price dl{//料金dl
+        dd{//内訳
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            color: $black;
+            background: #fff;
+            border: 1px solid $orange;
+            padding: 40px;
+            text-align: center;
+            font-size: 1.5em;
+            div{
+                padding: 0 50px;
+                line-height: 2;
+                span{//税込
+                    display: block;
+                    font-size: 0.8em;
+                    color: $orange;
+                }//span
+                strong{//税抜
+                    display: block;
+                    font-size: 1.5em;
+                    color: $orange;
+                    line-height: 1;
+                    span{//税抜円
+                        display: inline;
+                        font-size: 0.6em;
+                    }//span
+                }//strong
+            }//div
+        .plus2{
+                font-size: 2em;
+                color: $gray;
+                opacity: 0.5;
+            }//.plus2
+    }//dd
+}//.price .dl
+
+.price .marriage{//成婚料
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 95px;
+        dt{//成婚料
+            width: 25%;
+            display: inline-block;
+        }//dt
+        dd{//税込
+            width: 50%;
+            display: inline-block;
+            text-align: left;
+            color: #fff;
+            background: $orange;
+            font-size: 1.3em;
+            strong{//税抜
+                font-size: 2em;
+                font-weight: bold;
+            }
+    }//dd
+}//.price .marriage
+
+.price section > div{//会費説明
+    color: $black;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 95px;
+    line-height: 2;
+    h4{
+        font-size: 2em;
+    }
+}
+
+.price ul{//入会資格
+    width: 100%;
+    text-align: center;
+    margin-bottom: 95px;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.price{//ご入会時に必要なもの
+    counter-reset: counter;
+    .must{//h3
+    color: $red;
+    }//.must
+    ol{
+        width: 55%;
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+        margin: 0 auto 95px;
+        li{
+            width: 100%;
+            text-align: left;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: $red;
+            opacity: 0.6;
+            line-height: 2;
+                 &:before{
+                    counter-increment: counter;
+                    content: counter(counter)".";
+                    line-height: 2;
+                    font-size: 1.5em;
+                    color: $red;
+                    margin-right: 10px;                     
+                }//li:before
+            }//li
+        }//ol
+}//.price
+
+.price{//個人情報保護方針へのリンク
+    div{
+        .privacy{//a
+            color: $black;
+            .right{//矢印
+                color: $red;
+                opacty: 0.6;
+                margin-right: 10px;
+            }//.right
+        }//.privacy
+    }//div
+}//.price
+//-------------------------price.html----------------------------//

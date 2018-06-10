@@ -624,3 +624,201 @@ footer .footer-dwn small {
   text-align: center;
   line-height: 2;
 }
+
+.price {
+  max-width: 1200px;
+  width: 100%;
+  margin: 95px auto;
+  font-family: "NotoSansCJK-Regular";
+}
+.price h3 {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 95px;
+  color: #2d2d2d;
+  font-size: 2em;
+}
+.price h3:before {
+  content: "";
+  position: absolute;
+  bottom: -1em;
+  left: 50%;
+  display: inline-block;
+  width: 60px;
+  height: 2px;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #ff0000;
+}
+
+.price dl {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  letter-spacing: 1.2px;
+  border: 1px solid #e87d0c;
+  background: #e87d0c;
+  margin: 0 auto;
+}
+.price dl dt {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  font-size: 2em;
+  color: #fff;
+  background: #e87d0c;
+  padding: 20px;
+  position: relative;
+}
+.price dl dt strong {
+  display: inline-block;
+  padding-left: 100px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.price dl dt span {
+  display: inline-block;
+  font-size: 0.6em;
+  font-weght: bold;
+}
+.price dl dt a {
+  display: block;
+  color: #fff;
+  background: rgba(232, 125, 12, 0.3);
+  font-size: 0.6em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 15px 20px;
+}
+.price dl dt a .plus {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 1.5em;
+}
+
+.price dl dd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #2d2d2d;
+  background: #fff;
+  border: 1px solid #e87d0c;
+  padding: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+.price dl dd div {
+  padding: 0 50px;
+  line-height: 2;
+}
+.price dl dd div span {
+  display: block;
+  font-size: 0.8em;
+  color: #e87d0c;
+}
+.price dl dd div strong {
+  display: block;
+  font-size: 1.5em;
+  color: #e87d0c;
+  line-height: 1;
+}
+.price dl dd div strong span {
+  display: inline;
+  font-size: 0.6em;
+}
+.price dl dd .plus2 {
+  font-size: 2em;
+  color: #8f8f8f;
+  opacity: 0.5;
+}
+
+.price .marriage {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 95px;
+}
+.price .marriage dt {
+  width: 25%;
+  display: inline-block;
+}
+.price .marriage dd {
+  width: 50%;
+  display: inline-block;
+  text-align: left;
+  color: #fff;
+  background: #e87d0c;
+  font-size: 1.3em;
+}
+.price .marriage dd strong {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.price section > div {
+  color: #2d2d2d;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 95px;
+  line-height: 2;
+}
+.price section > div h4 {
+  font-size: 2em;
+}
+
+.price ul {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 95px;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.price {
+  counter-reset: counter;
+}
+.price .must {
+  color: #ff0000;
+}
+.price ol {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  margin: 0 auto 95px;
+}
+.price ol li {
+  width: 100%;
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ff0000;
+  opacity: 0.6;
+  line-height: 2;
+}
+.price ol li:before {
+  counter-increment: counter;
+  content: counter(counter) ".";
+  line-height: 2;
+  font-size: 1.5em;
+  color: #ff0000;
+  margin-right: 10px;
+}
+
+.price div .privacy {
+  color: #2d2d2d;
+}
+.price div .privacy .right {
+  color: #ff0000;
+  opacty: 0.6;
+  margin-right: 10px;
+}
