@@ -876,3 +876,15 @@ footer .footer-dwn small {
   width: 980px;
   margin: 0 auto 95px;
 }
+
+.enquiry {
+  width: 100%;
+  margin: 0 auto;
+}
+.enquiry h2 {
+  width: 980px;
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 auto 95px;
+}
