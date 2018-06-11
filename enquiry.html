@@ -10,6 +10,10 @@
         <link href="https://fonts.googleapis.com/css?family=Kameron:400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
         <link rel="stylesheet" href="scss/style.css">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/jquery.FloatLabel.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="container"><!--全体-->
@@ -45,39 +49,39 @@
              <h2>資料請求・お問い合わせ</h2>
              <form id="enquiryform" action="#" method="post">
                  <fieldset>
-                    <div>
+                     <div class="js-float-label-wrapper">
                        <label for="lastname">姓</label>
                         <input type="text" name="lastname">
                     </div>
-                    <div>
+                     <div class="js-float-label-wrapper">
                         <label for="firstname">名</label>
                         <input type="text" name="firstname">
                     </div>
-                     <div>
+                     <div class="js-float-label-wrapper">
                          <label for="lastnamePhonetic">カタカナ姓</label>
                          <input type="text" name="lastnamePhonetic">
                      </div>
-                     <div>
+                     <div class="js-float-label-wrapper">
                          <label for="firstnamePhonetic">カタカナ名</label>
                          <input type="text" name="firstnamePhonetic">
                      </div>
-                    <div>
+                     <div class="js-float-label-wrapper">
                         <label for="email">メールアドレス</label>
                         <input type="text" value="" name="email">
                     </div>
-                     <div>
+                     <div class="js-float-label-wrapper">
                          <label for="email_check">メールアドレス（確認）</label>
                          <input type="text" value="" name="email_check">
                      </div>
-                     <div>
+                     <div class="js-float-label-wrapper">
                          <label for="tel">電話番号（例：12345678）</label>
                          <input type="tel" value="" name="tel">
                      </div>
-                     <div>
+                     <div class="js-float-label-wrapper">
                          <label for="postalcode">〒(123-4567)</label>
                          <input type="text" value="" name="postalcode">
                      </div>
-                     <div>
+                     <div class="js-float-label-wrapper">
                          <label for="state">都道府県</label>
                          <select name="state" id="state">
                              <option value="" selected>都道府県</option>
@@ -130,27 +134,27 @@
                              <option value="沖縄県">沖縄県</option>
                          </select>
                      </div>
-                     <div>
+                     <div class="js-float-label-wrapper">
                          <label for="city">市区町村（例）豊島区</label>
                          <input type="text" value="" name="city">
                      </div>
-                     <div>
+                     <div class="js-float-label-wrapper">
                          <label for="street">番地など（例）東池袋3-1-4</label>
                          <input type="text" value="" name="street">
                      </div>
-                     <div>
+                     <div class="js-float-label-wrapper">
                          <label for="street2">建物名など（例）メゾンサンシャイン805号</label>
                          <input type="text" value="" name="street2">
                      </div>
-                     <div>
+                     <div class="js-float-label-wrapper">
                          <label for="companyname">会社名（オプション）</label>
                          <input type="text" value="" name="companyname">
                      </div>
-                     <div>
+                     <div class="js-float-label-wrapper">
                          <label for="enquiry">お問い合わせ内容</label>
                          <textarea name="enquiry" id="enquiry" cols="60" rows="10"></textarea>
                      </div>
-                     <div>
+                     <div class="js-float-label-wrapper">
                          <label for="relationship">結婚をお考えの方との続柄</label>
                          <select name="relationship" id="relationship">
                              <option value=""selected>ご本人</option>
@@ -208,5 +212,9 @@
                 </div><!--footer-dwn-->
             </footer><!--footer-->
         </div><!--container-->
+        
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/jquery.FloatLabel.js"></script>
+        <script src="scripts/main.js"></script>
     </body>
 </html>
