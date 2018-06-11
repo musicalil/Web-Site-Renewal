@@ -801,7 +801,8 @@ footer {
     flex-flow: wrap;
     width: 70%;
     margin: 0 auto;
-    font-family: "NotoSansCJK-Regular"; }
+    font-family: "NotoSansCJK-Regular";
+    margin-bottom: 95px; }
     .company section table {
       width: 100%; }
       .company section table tr {
@@ -829,3 +830,7 @@ footer {
           background: #f3f8f8;
           padding: 20px;
           line-height: 1.5; }
+
+.company figure {
+  width: 980px;
+  margin: 0 auto 95px; }

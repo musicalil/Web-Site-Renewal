@@ -897,12 +897,13 @@ footer{
 .company{//会社概要
     width: 100%;
         section{//
-        display: flex;
-        justify-content: center;
-        flex-flow: wrap;
-        width: 70%;
-        margin: 0 auto;
-        font-family: $gothic;
+            display: flex;
+            justify-content: center;
+            flex-flow: wrap;
+            width: 70%;
+            margin: 0 auto;
+            font-family: $gothic;
+            margin-bottom: 95px;
         table{
             width: 100%;
             tr{
@@ -930,7 +931,12 @@ footer{
     }//section
 }//.company
 
-
+.company{
+    figure{
+        width: 980px;
+        margin: 0 auto 95px;
+    }
+}
 
 
 //-------------------------company.html--------------------------//
