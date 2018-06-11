@@ -774,3 +774,58 @@ footer {
     color: #ff0000;
     opacty: 0.6;
     margin-right: 10px; }
+
+.page4 {
+  margin-bottom: 175px; }
+
+.company {
+  width: 100%;
+  margin: 0 auto; }
+  .company h2 {
+    width: 90%;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 auto 95px; }
+
+.company {
+  width: 100%; }
+  .company section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+    width: 70%;
+    margin: 0 auto;
+    font-family: "NotoSansCJK-Regular"; }
+    .company section table {
+      width: 100%; }
+      .company section table tr {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 90%;
+        text-align: left;
+        border: 1px solid #fff;
+        background: #e4e4e4; }
+        .company section table tr th {
+          width: 40%;
+          font-size: 1.2em;
+          padding: 20px; }
+        .company section table tr td {
+          width: 60%;
+          background: #f3f8f8;
+          padding: 20px;
+          line-height: 1.5; }
