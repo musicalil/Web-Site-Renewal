@@ -886,7 +886,7 @@ footer{
     width: 100%;
     margin: 0 auto;
     h2{//タイトル
-        width: 90%;
+        width: 980px;
         text-align: left;
         font-size: 1.5em;
         font-weight: bold;
@@ -896,32 +896,30 @@ footer{
 
 .company{//会社概要
     width: 100%;
+    box-sizing: border-box;
         section{//
             display: flex;
             justify-content: center;
             flex-flow: wrap;
-            width: 70%;
             margin: 0 auto;
             font-family: $gothic;
             margin-bottom: 95px;
         table{
-            width: 100%;
             tr{
+                width: 980px;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                box-sizing: border-box;
-                width: 90%;
                 text-align: left;
                 border: 1px solid #fff;
                 background: #e4e4e4;
                 th{
-                    width: 40%;
+                    width: 200px;
                     font-size: 1.2em;
                     padding: 20px;
                 }//th
                 td{
-                    width: 60%;
+                    width: 980px - 200px;
                     background: #f3f8f8;
                     padding: 20px;
                     line-height: 1.5;
