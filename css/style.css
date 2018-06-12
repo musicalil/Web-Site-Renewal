@@ -460,14 +460,14 @@ footer {
     overflow: hidden;
     margin: 0 auto; }
     footer .footer-dwn div {
+      width: 50%;
       float: left; }
       footer .footer-dwn div .logo {
         text-align: center; }
       footer .footer-dwn div p a {
         color: #8f8f8f;
-        display: block;
-        padding: 35px 0;
-        margin-left: 10px; }
+        padding: 35px 50px;
+        margin-left: 100px; }
     footer .footer-dwn small {
       margin-right: 20px;
       padding: 35px;
@@ -859,3 +859,58 @@ form {
       form fieldset div .right {
         width: 200px;
         float: right; }
+
+.privacy {
+  width: 980px;
+  margin: 0 auto 95px;
+  line-height: 1.5; }
+  .privacy h2 {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 auto 95px; }
+  .privacy h3 {
+    color: #1f4fa4;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 auto 35px; }
+  .privacy p {
+    margin-bottom: 35px;
+    letter-spacing: 1px; }
+  .privacy h4 {
+    color: #ff0000;
+    margin-bottom: 10px; }
+  .privacy h5 {
+    color: #e87d0c; }
+
+.privacy .policy {
+  counter-reset: privacy; }
+  .privacy .policy li {
+    color: #2d2d2d;
+    padding-left: 2em;
+    text-indent: -2em;
+    margin-bottom: 20px; }
+    .privacy .policy li:before {
+      counter-increment: privacy;
+      content: counter(privacy) ".";
+      font-weight: bold;
+      margin-right: 1em; }
+    .privacy .policy li p {
+      margin-top: 10px;
+      color: #2d2d2d; }
+
+.privacy dl {
+  margin-bottom: 35px; }
+
+.privacy .security {
+  counter-reset: security; }
+  .privacy .security li {
+    color: #e87d0c; }
+    .privacy .security li:before {
+      counter-increment: security;
+      content: counter(security) ".";
+      font-weight: bold;
+      margin-right: 1em; }
+  .privacy .security p {
+    color: #2d2d2d;
+    margin-top: 10px; }

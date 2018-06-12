@@ -516,15 +516,16 @@ footer{
         overflow: hidden;
         margin: 0 auto;
         div{
+            width: 50%;
             float: left;
         .logo{
             text-align: center;
         }//.logo
         p a{
             color: #8f8f8f;
-            display: block;
-            padding: 35px 0;
-            margin-left: 10px;
+//            display: block;
+            padding: 35px 50px;;
+            margin-left: 100px;
         }//p a
         }
         small{
@@ -978,3 +979,74 @@ form{
 }
 
 //-------------------------enquiry.html--------------------------//
+
+//-------------------------privacy.html--------------------------//
+
+.privacy{//main
+    width: 980px;
+    margin: 0 auto 95px;
+    line-height: 1.5;
+    h2{//タイトル
+        text-align: left;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 0 auto 95px;
+    }//h2
+    h3{
+        color: $blue;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin: 0 auto 35px;
+    }
+    p{
+        margin-bottom: 35px;
+        letter-spacing: 1px;
+    }
+    h4{
+        color: $red;
+        margin-bottom: 10px;
+    }
+    h5{
+        color: $orange;
+    }
+}//.privacy
+
+.privacy .policy{
+    counter-reset: privacy;
+    li{
+        color: $black;
+        padding-left: 2em;
+        text-indent: -2em;
+        margin-bottom: 20px;
+        &:before{
+            counter-increment: privacy;
+            content: counter(privacy)".";
+            font-weight: bold;
+            margin-right: 1em;
+        }
+        p{
+            margin-top: 10px;
+            color: $black;
+        }
+    }
+}
+.privacy dl{
+    margin-bottom: 35px;
+}
+.privacy .security{
+    counter-reset: security;
+    li{
+        color: $orange;
+        &:before{
+            counter-increment: security;
+            content: counter(security)".";
+            font-weight: bold;
+            margin-right: 1em;
+        }   
+    }
+    p{
+        color: $black;
+        margin-top: 10px;
+    }
+}
+//-------------------------privacy.html--------------------------//
