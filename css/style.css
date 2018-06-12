@@ -835,30 +835,27 @@ footer {
 .enquiry {
   width: 100%; }
   .enquiry h2 {
-    width: 980px;
+    width: 800px;
     text-align: left;
     font-size: 1.5em;
     font-weight: bold;
     margin: 0 auto 95px; }
 
 form {
-  width: 980px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 800px;
   margin: 0 auto; }
   form fieldset {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-flow: wrap;
-    flex-flow: wrap; }
+    display: flex; }
     form fieldset div {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -ms-flex-flow: wrap;
-      flex-flow: wrap; }
+      width: 50%;
+      overflow: hidden; }
+      form fieldset div .left {
+        width: 200px;
+        float: left; }
+      form fieldset div .right {
+        width: 200px;
+        float: right; }

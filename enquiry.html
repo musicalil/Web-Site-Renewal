@@ -15,10 +15,12 @@
         <!--CSS読み込み-->
         <link rel="stylesheet" href="css/style.css">
         <!--jQuery CDN-->
+<!--
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!--FloatLabel.js-->
+        FloatLabel.js
         <link rel="stylesheet" href="styles/jquery.FloatLabel.css">
         <script src="scripts/jquery.FloatLabel.js"></script>
+-->
     </head>
     <body>
         <div class="container"><!--全体-->
@@ -58,38 +60,51 @@
                  <fieldset>
                      <div class="js-float-label-wrapper">
                        <label for="lastname">姓</label>
-                        <input type="text" name="lastname">
+                        <input type="text" id="lastname" size="10" maxlength="16">
                     </div>
                      <div class="js-float-label-wrapper">
-                        <label for="firstname">名</label>
-                        <input type="text" name="firstname">
+                        <label for="firstname">
+                        <span>名</span>
+                        </label>
+                         <input type="text" id="firstname" size="10" maxlength="16">
                     </div>
                      <div class="js-float-label-wrapper">
-                         <label for="lastnamePhonetic">カタカナ姓</label>
-                         <input type="text" name="lastnamePhonetic">
+                         <label for="lastnamePhonetic">
+                             <span>カタカナ姓</span>
+                         </label>
+                         <input type="text" id="lastnamePhonetic" size="10" maxlength="16">
                      </div>
                      <div class="js-float-label-wrapper">
-                         <label for="firstnamePhonetic">カタカナ名</label>
-                         <input type="text" name="firstnamePhonetic">
+                         <label for="firstnamePhonetic">
+                             <span>カタカナ名</span>
+                         </label>
+                         <input type="text" id="firstnamePhonetic" size="10" maxlength="16">
                      </div>
                      <div class="js-float-label-wrapper">
-                        <label for="email">メールアドレス</label>
-                        <input type="text" value="" name="email">
+                        <label for="email">
+                            <span>メールアドレス</span>
+                        </label>
+                         <input type="text" value="" id="email" size="10" maxlength="16">
                     </div>
                      <div class="js-float-label-wrapper">
-                         <label for="email_check">メールアドレス（確認）</label>
-                         <input type="text" value="" name="email_check">
+                         <label for="email_check">
+                             <span>メールアドレス（確認）</span>
+                         </label>
+                         <input type="text" value="" id="email_check" size="10" maxlength="16">
                      </div>
                      <div class="js-float-label-wrapper">
-                         <label for="tel">電話番号（例：12345678）</label>
-                         <input type="tel" value="" name="tel">
+                         <label for="tel">
+                             <span>電話番号（例：12345678）</span>
+                         </label>
+                         <input type="tel" value="" id="tel" size="9" maxlength="9">
                      </div>
                      <div class="js-float-label-wrapper">
-                         <label for="postalcode">〒(123-4567)</label>
-                         <input type="text" value="" name="postalcode">
+                         <label for="postalcode">
+                             <span>〒(123-4567)</span>
+                         </label>
+                         <input type="text" value="" id="postalcode" size="5" maxlength="5">
                      </div>
                      <div class="js-float-label-wrapper">
-                         <label for="state">都道府県</label>
                          <select name="state" id="state">
                              <option value="" selected>都道府県</option>
                              <option value="北海道">北海道</option>
@@ -142,27 +157,37 @@
                          </select>
                      </div>
                      <div class="js-float-label-wrapper">
-                         <label for="city">市区町村（例）豊島区</label>
-                         <input type="text" value="" id="city">
+                         <label for="city">
+                             <span>市区町村（例）豊島区</span>
+                         </label>
+                         <input type="text" value="" id="city" size="10" maxlength="22">
                      </div>
                      <div class="js-float-label-wrapper">
-                         <label for="street">番地など（例）東池袋3-1-4</label>
-                         <input type="text" value="" id="street">
+                         <label for="street">
+                             <span>番地など（例）東池袋3-1-4</span>
+                         </label>
+                         <input type="text" value="" id="street" size="20" maxlength="34">
                      </div>
                      <div class="js-float-label-wrapper">
-                         <label for="street2">建物名など（例）メゾンサンシャイン805号</label>
-                         <input type="text" value="" id="street2">
+                         <label for="street2">
+                             <span>建物名など（例）メゾンサンシャイン805号</span>
+                         </label>
+                         <input type="text" value="" id="street2" size="20" maxlength="34">
                      </div>
                      <div class="js-float-label-wrapper">
-                         <label for="companyname">会社名（オプション）</label>
-                         <input type="text" value="" id="companyname">
+                         <label for="companyname">
+                             <span>会社名（オプション）</span>
+                         </label>
+                         <input type="text" value="" id="companyname" size="20" maxlength="34">
                      </div>
                      <div class="js-float-label-wrapper">
-                         <label for="enquiry">お問い合わせ内容</label>
+                         <label for="enquiry">
+                             <span>お問い合わせ内容</span>
+                         </label>
                          <textarea name="enquiry" id="enquiry" cols="60" rows="10"></textarea>
                      </div>
                      <div class="js-float-label-wrapper">
-                         <label for="relationship">結婚をお考えの方との続柄</label>
+                         <p>結婚をお考えの方との続柄</p>
                          <select name="relationship" id="relationship">
                              <option value=""selected>ご本人</option>
                              <option value="ご両親">ご両親</option>
@@ -219,6 +244,6 @@
                 </div><!--footer-dwn-->
             </footer><!--footer-->
         </div><!--container-->
-        <script>$( '.js-float-label-wrapper' ).FloatLabel();;</script>
+<!--        <script>$( '.js-float-label-wrapper' ).FloatLabel();;</script>-->
     </body>
 </html>

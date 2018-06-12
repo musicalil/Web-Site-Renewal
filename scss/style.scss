@@ -945,7 +945,7 @@ footer{
 .enquiry{//main
     width: 100%;
     h2{//タイトル
-        width: 980px;
+        width: 800px;
         text-align: left;
         font-size: 1.5em;
         font-weight: bold;
@@ -954,22 +954,27 @@ footer{
 }//.enquiry
 
 form{
-    width: 980px;
+    box-sizing: border-box;
+    width: 800px;
     margin: 0 auto;
     fieldset{
         display: flex;
-        justify-content: center;
-        flex-flow: wrap;
+//        justify-content: space-between;
         div{
-            display: flex;
-            justify-content: space-between;
-            flex-flow: wrap;
+            width: 50%;
+            overflow: hidden;
+//            display: flex;
+//            justify-content: space-between;
+            .left{
+                width: 200px;
+                float: left;
+            }
+            .right{
+                width: 200px;
+                float: right;
+            }
         }
     }
 }
-//
-//fieldset{
-//    .lastname,
-//}
 
 //-------------------------enquiry.html--------------------------//
