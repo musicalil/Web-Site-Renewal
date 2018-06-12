@@ -833,11 +833,32 @@ footer {
   margin: 0 auto 95px; }
 
 .enquiry {
-  width: 100%;
-  margin: 0 auto; }
+  width: 100%; }
   .enquiry h2 {
     width: 980px;
     text-align: left;
     font-size: 1.5em;
     font-weight: bold;
     margin: 0 auto 95px; }
+
+form {
+  width: 980px;
+  margin: 0 auto; }
+  form fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap; }
+    form fieldset div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-flow: wrap;
+      flex-flow: wrap; }

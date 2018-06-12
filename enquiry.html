@@ -6,14 +6,19 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="description" content="JMS小倉 東京オフィスの資料請求ページです。お気軽にお問い合わせください。">
         <title>資料請求 - 東京 池袋の結婚相談所｜JMS小倉 東京オフィス</title>
+        <!--fontawesome-->
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <!--fonts Kameron-->
         <link href="https://fonts.googleapis.com/css?family=Kameron:400,700" rel="stylesheet">
+        <!--fonts SawarabiMincho-->
         <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
+        <!--CSS読み込み-->
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/jquery.FloatLabel.css">
-        <link rel="stylesheet" href="styles/main.css">
+        <!--jQuery CDN-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--FloatLabel.js-->
+        <link rel="stylesheet" href="styles/jquery.FloatLabel.css">
+        <script src="scripts/jquery.FloatLabel.js"></script>
     </head>
     <body>
         <div class="container"><!--全体-->
@@ -35,7 +40,8 @@
                     </div><!--header-right-->
                 </div><!--.header-->
             </header><!--header-->
-            <section class="menu"><!--トップメニュー-->
+            <!--
+               <section class="menu">
                 <ul>
                     <li><a href="http://jmsk.tokyo/contact/"><h3>ご成婚までの流れ</h3><img src="images/counseling.jpg" width="270" height="178" alt="ご成婚までの流れ"></a></li>
                     <li><a href="http://jmsk.tokyo/siryoseikyu/"><h3>資料請求</h3><img src="images/shiryoseikyu.jpg" width="270" height="178" alt="資料請求"></a></li>
@@ -44,7 +50,8 @@
                     <li><a href="http://jmsk.tokyo/married/"><h3>ご成婚までの流れ</h3><img src="images/wedding.jpg" width="270" height="178" alt="ご成婚までの流れ"></a></li>
                     <li><a href="http://jmsk.tokyo/blog/"><h3>ブログ</h3><img src="images/blog.jpg" width="270" height="178" alt="ブログ"></a></li>
                 </ul>
-            </section><!--menuー-->
+            </section>
+            -->
             <main class="enquiry">
              <h2>資料請求・お問い合わせ</h2>
              <form id="enquiryform" action="#" method="post">
@@ -136,19 +143,19 @@
                      </div>
                      <div class="js-float-label-wrapper">
                          <label for="city">市区町村（例）豊島区</label>
-                         <input type="text" value="" name="city">
+                         <input type="text" value="" id="city">
                      </div>
                      <div class="js-float-label-wrapper">
                          <label for="street">番地など（例）東池袋3-1-4</label>
-                         <input type="text" value="" name="street">
+                         <input type="text" value="" id="street">
                      </div>
                      <div class="js-float-label-wrapper">
                          <label for="street2">建物名など（例）メゾンサンシャイン805号</label>
-                         <input type="text" value="" name="street2">
+                         <input type="text" value="" id="street2">
                      </div>
                      <div class="js-float-label-wrapper">
                          <label for="companyname">会社名（オプション）</label>
-                         <input type="text" value="" name="companyname">
+                         <input type="text" value="" id="companyname">
                      </div>
                      <div class="js-float-label-wrapper">
                          <label for="enquiry">お問い合わせ内容</label>
@@ -212,9 +219,6 @@
                 </div><!--footer-dwn-->
             </footer><!--footer-->
         </div><!--container-->
-        
-        <script src="scripts/jquery.js"></script>
-        <script src="scripts/jquery.FloatLabel.js"></script>
-        <script src="scripts/main.js"></script>
+        <script>$( '.js-float-label-wrapper' ).FloatLabel();;</script>
     </body>
 </html>

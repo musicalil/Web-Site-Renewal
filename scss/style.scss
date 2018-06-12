@@ -944,7 +944,6 @@ footer{
 
 .enquiry{//main
     width: 100%;
-    margin: 0 auto;
     h2{//タイトル
         width: 980px;
         text-align: left;
@@ -952,6 +951,25 @@ footer{
         font-weight: bold;
         margin: 0 auto 95px;
     }//h2
-}//.company
+}//.enquiry
+
+form{
+    width: 980px;
+    margin: 0 auto;
+    fieldset{
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+        div{
+            display: flex;
+            justify-content: space-between;
+            flex-flow: wrap;
+        }
+    }
+}
+//
+//fieldset{
+//    .lastname,
+//}
 
 //-------------------------enquiry.html--------------------------//
