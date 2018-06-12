@@ -1,0 +1,1 @@
+//<script>$( '.js-float-label-wrapper' ).FloatLabel();;</script>
