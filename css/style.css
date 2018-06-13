@@ -846,19 +846,10 @@ form {
   box-sizing: border-box;
   width: 800px;
   margin: 0 auto; }
-  form fieldset {
+  form fieldset dl {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    form fieldset div {
-      width: 50%;
-      overflow: hidden; }
-      form fieldset div .left {
-        width: 200px;
-        float: left; }
-      form fieldset div .right {
-        width: 200px;
-        float: right; }
 
 .privacy {
   width: 980px;

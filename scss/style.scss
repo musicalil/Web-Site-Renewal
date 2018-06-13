@@ -959,21 +959,27 @@ form{
     width: 800px;
     margin: 0 auto;
     fieldset{
-        display: flex;
+        //display: flex;
 //        justify-content: space-between;
-        div{
-            width: 50%;
-            overflow: hidden;
-//            display: flex;
+        dl{
+            display: flex;
 //            justify-content: space-between;
-            .left{
-                width: 200px;
-                float: left;
-            }
-            .right{
-                width: 200px;
-                float: right;
-            }
+//            .left{
+//                width: 200px;
+//                float: left;
+//            }
+//            .right{
+//                width: 200px;
+//                float: right;
+//            }
+//            dt{
+//                width: 50px;
+//                float: left;
+//            }
+//            dd{
+//                width: 400px;
+//                float: left;
+//            }
         }
     }
 }
