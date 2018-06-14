@@ -65,11 +65,9 @@ body {
 a {
   text-decoration: none; }
 
-header img {
-  width: 100%;
-  margin: 0 auto; }
-
 header {
+  width: 100%;
+  text-align: center;
   margin-bottom: 30px; }
   header .header {
     background: #fff;
@@ -79,6 +77,9 @@ header {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: 100%;
     position: fixed;
     top: 0;
@@ -86,96 +87,89 @@ header {
     z-index: 1;
     -webkit-box-shadow: 0 1px 17px 0 rgba(50, 50, 50, 0.15);
     box-shadow: 0 1px 17px 0 rgba(50, 50, 50, 0.15); }
-    header .header .gnav {
-      width: 650px; }
-      header .header .gnav ul {
-        height: 80px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        margin: 0 auto; }
-        header .header .gnav ul li {
-          width: 130px;
-          text-align: center;
-          border-left: 0.2px solid #000; }
-          header .header .gnav ul li:last-child {
-            border-right: 0.2px solid #000; }
-          header .header .gnav ul li a {
-            height: 19px;
-            color: #2d2d2d;
-            display: block;
-            line-height: 19px;
-            font-size: 85%; }
-            header .header .gnav ul li a:hover {
-              opacity: 0.5; }
-    header .header .header-right {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 80%;
-      color: #fff;
-      margin-right: 40px;
-      letter-spacing: 2px;
-      text-align: center; }
-      header .header .header-right .tel {
-        width: 150px;
-        height: 30px;
-        line-height: 30px;
-        font-family: "NotoSansCJK-Regular";
-        font-weight: bold;
-        background: #1f4fa4; }
-        header .header .header-right .tel .telicon {
-          font-size: 80%;
-          padding-right: 5px; }
-      header .header .header-right a {
-        width: 150px;
-        height: 30px;
-        line-height: 30px;
-        margin-left: 16px;
-        color: #fff;
-        background: #1f4fa4;
-        display: block; }
-        header .header .header-right a .mailicon {
-          padding-right: 5px; }
-        header .header .header-right a span {
-          font-weight: bold;
-          border-radius: 8px;
-          background: #fff;
-          color: #1f4fa4;
-          padding: 0 8px;
-          margin-right: 5px; }
-  header h2 {
-    position: absolute;
-    font-family: "Sawarabi Mincho";
-    font-size: 220%;
-    color: #fff;
-    top: 50%;
-    right: 20px; }
 
-.logo {
-  display: block;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  background-image: url(../images/logo.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 400px;
-  height: 80px;
+header .header .logo {
   margin-left: 40px; }
+
+header .header .gnav {
+  width: 650px; }
+  header .header .gnav ul {
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 auto; }
+    header .header .gnav ul li {
+      width: 130px;
+      text-align: center;
+      border-left: 0.2px solid #000; }
+      header .header .gnav ul li:last-child {
+        border-right: 0.2px solid #000; }
+      header .header .gnav ul li a {
+        height: 19px;
+        color: #2d2d2d;
+        display: block;
+        line-height: 19px;
+        font-size: 85%; }
+        header .header .gnav ul li a:hover {
+          opacity: 0.5; }
+
+header .header .header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 80%;
+  color: #fff;
+  margin-right: 40px;
+  letter-spacing: 2px;
+  text-align: center; }
+  header .header .header-right .tel {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    font-family: "NotoSansCJK-Regular";
+    font-weight: bold;
+    background: #1f4fa4; }
+    header .header .header-right .tel .telicon {
+      font-size: 80%;
+      padding-right: 5px; }
+  header .header .header-right a {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 16px;
+    color: #fff;
+    background: #1f4fa4;
+    display: block; }
+    header .header .header-right a .mailicon {
+      padding-right: 5px; }
+    header .header .header-right a span {
+      font-weight: bold;
+      border-radius: 8px;
+      background: #fff;
+      color: #1f4fa4;
+      padding: 0 8px;
+      margin-right: 5px; }
+
+header h2 {
+  position: absolute;
+  font-family: "Sawarabi Mincho";
+  font-size: 220%;
+  color: #fff;
+  top: 50%;
+  right: 20px; }
 
 .num {
   width: 100%; }
@@ -359,34 +353,25 @@ main {
             padding-top: 25px; }
 
 aside {
-  width: 980px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0 auto 95px; }
-  aside div {
-    padding-right: 72px; }
-    aside div:last-child {
-      padding-right: 0;
-      padding-left: 72px; }
-    aside div a {
-      width: 240px;
-      display: inline-block;
-      color: #fff;
-      background: #1f4fa4;
-      text-align: center;
-      padding: 22px 0;
-      font-family: "Sawarabi Mincho";
-      font-size: 1.4em;
-      letter-spacing: 3px; }
+  text-align: center;
+  margin-bottom: 95px; }
+  aside a {
+    display: inline-block;
+    color: #fff;
+    background: #1f4fa4;
+    text-align: center;
+    padding: 22px;
+    font-family: "Sawarabi Mincho";
+    font-size: 1.4em;
+    letter-spacing: 3px;
+    line-height: 2; }
 
 footer {
   width: 100%;
   margin: 0 auto;
-  background: #f3f8f8; }
+  background: #f3f8f8;
+  letter-spacing: 0.5px;
+  line-height: 1.2; }
   footer .pagetop {
     width: 980px;
     height: 70px;
@@ -451,38 +436,26 @@ footer {
       color: #8f8f8f; }
   footer .footer-dwn {
     width: 100%;
-    height: 80px;
     background: #f6f6f6;
     color: #8f8f8f;
     font-size: 70%;
     border-top: 1px solid #e6e6e6;
     text-align: center;
     overflow: hidden;
-    margin: 0 auto; }
+    padding: 40px auto; }
     footer .footer-dwn div {
-      width: 50%;
       float: left;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
-      footer .footer-dwn div .f-logo {
+      align-items: center;
+      padding: 35px 0; }
+      footer .footer-dwn div h4 {
         text-align: left;
-        display: block;
-        text-indent: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        background-image: url(../images/logo.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 200px;
-        height: 80px;
         margin-left: 40px; }
       footer .footer-dwn div p {
-        color: #8f8f8f;
         width: 200px; }
         footer .footer-dwn div p a {
           color: #8f8f8f; }
@@ -495,8 +468,7 @@ footer {
   color: #2d2d2d; }
 
 .married {
-  max-width: 1200px;
-  width: 100%;
+  width: 1200px;
   margin: 0 auto 95px;
   counter-reset: count; }
   .married .intro {
