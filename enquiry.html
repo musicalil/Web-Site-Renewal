@@ -43,7 +43,7 @@
                     </div><!--header-right-->
                 </div><!--.header-->
             </header><!--header-->
-            <!--
+            
                <section class="menu">
                 <ul>
                     <li><a href="http://jmsk.tokyo/contact/"><h3>ご成婚までの流れ</h3><img src="images/counseling.jpg" width="270" height="178" alt="ご成婚までの流れ"></a></li>
@@ -54,26 +54,53 @@
                     <li><a href="http://jmsk.tokyo/blog/"><h3>ブログ</h3><img src="images/blog.jpg" width="270" height="178" alt="ブログ"></a></li>
                 </ul>
             </section>
-            -->
+            
             <main class="enquiry">
              <h2>資料請求・お問い合わせ</h2>
              <form id="enquiryform" action="#" method="post">
                  <fieldset>
+                    <dl>
+                        <dt>お問い合わせ項目<strong>必須</strong></dt>
+                        <dd>
+                            <div>
+                                <label for="enquiry" class="radio">
+                                    <input class="radiobutton" type="radio" id="enquiry" name="enquiry">
+                                    資料請求
+                                </label>
+                                <label for="contact" class="radio">
+                                    <input class="radiobutton" type="radio" id="contact" name="contact">
+                                    お問い合わせ
+                                </label>
+                            </div>
+                        </dd>
+                    </dl>
+                     <dl>
+                         <dt>お問い合わせ</dt>
+                         <dd>
+                             <div>
+                                 <textarea name="enquiry" id="enquiry" placeholder="お問い合わせ内容をご記入ください。"></textarea>
+                             </div>
+                         </dd>
+                     </dl>
                      <dl>
                         <dt>お名前（漢字）<strong>必須</strong></dt>
                         <dd>
-                        <div>
-                        <label for="lastname">姓</label><input type="text" id="lastname" size="10" maxlength="16">
-                        <label for="firstname">名</label><input type="text" id="firstname" size="10" maxlength="16">
+                        <div class="inputname">
+                            <label class="name" for="lastname">姓</label>
+                            <span><input type="text" id="lastname"></span>
+                            <label class="name" for="firstname">名</label>
+                            <span><input type="text" id="firstname"></span>
                         </div>
                         </dd>                     
                      </dl>
                      <dl>
                          <dt>フリガナ（全角カナ）<strong>必須</strong></dt>
                          <dd>
-                         <div>
-                         <label for="lastnamePhonetic">セイ</label><input type="text" id="lastnamePhonetic" size="10" maxlength="16">
-                         <label for="firstnamePhonetic">メイ</label><input type="text" id="firstnamePhonetic" size="10" maxlength="16">
+                        <div class="inputname">
+                             <label class="name" for="lastnamePhonetic">セイ</label>
+                             <span><input type="text" id="lastnamePhonetic"></span>
+                             <label class="name" for="firstnamePhonetic">メイ</label>
+                             <span><input type="text" id="firstnamePhonetic"></span>
                          </div>
                          </dd>
                      </dl>
@@ -81,7 +108,7 @@
                         <dt>メールアドレス<br>（半角英数字）<strong>必須</strong></dt>
                         <dd>
                         <div>
-                            <input type="text" value="" id="email" size="10" maxlength="16"> 
+                            <input type="text" value="" id="email"> 
                         </div>    
                         </dd>
                     </dl>       
@@ -89,28 +116,59 @@
                         <dt>メールアドレス（確認）</dt>
                         <dd>
                         <div>
-                            <input type="text" value="" id="email_check" size="10" maxlength="16">
+                            <input type="text" value="" id="email_check">
                         </div>
                         </dd>
                     </dl>
+                     <dl>
+                         <dt>会社名</dt>
+                         <dd>
+                             <div>
+                                 <input type="text" value="" id="companyname">
+                             </div>
+                         </dd>
+                     </dl>
+                 </fieldset>
+                 <fieldset class="form2">
+                    <p>資料請求ご希望の方は下記にご記入お願いいたします。</p>
                     <dl>
                         <dt>電話番号<br>（半角数字）</dt>
                         <dd>
-                        <div>
-                            <input type="tel" value="" id="tel" size="9" maxlength="9">   
-                        </div>
+                            <div class="tel">
+                                <div>
+                                    <div>
+                                        <input type="tel" name="tel1" value="">
+                                    </div>
+                                </div>
+                                <div class="hyphen">
+                                    <span>-</span>
+                                </div>
+                                <div>
+                                    <div>
+                                        <input type="tel" name="tel2" value="">
+                                    </div>
+                                </div>
+                                <div class="hyphen">
+                                    <span>-</span>
+                                </div>
+                                <div>
+                                    <div>
+                                        <input type="tel" name="tel3" value="">
+                                    </div>
+                                </div>
+                            </div>
                         </dd>
                     </dl>
                     <dl>
                         <dt>郵便番号<br>（半角数字）<strong>必須</strong></dt>
                         <dd class="postalcode">
-                            <div>
-                            <input type="text" value="" id="postalcode" size="5" maxlength="5"> 
+                            <div class="code">
+                            <input type="text" value="" id="postalcode"> 
                             </div>
-                            <div>
+                            <div class="code">
                             <span class="separate">-</span>
                             </div>
-                            <div>
+                            <div class="code">
                             <input class="c-form__inputTextItem" type="text" name="EU_ZIP2" value="">
                             </div>
                         </dd>
@@ -119,8 +177,8 @@
                         <dt>住所<br>（全角）<strong>必須</strong></dt>
                         <dd>
                             <div>
-                                <label for="state">
-                                    <select name="state" id="state">
+                                <label class="adress" for="state">
+                                    <select class="state" name="state" id="state">
                                         <option value="" selected>都道府県を選択</option>
                                         <option value="北海道">北海道</option>
                                         <option value="青森県">青森県</option>
@@ -173,32 +231,16 @@
                                 </label>
                             </div>
                             <div>
-                                <input type="text" value="" id="city" size="10" maxlength="22">
+                                <input type="text" value="" id="city">
                                 <p>市区町村（例）豊島区</p> 
                             </div>
                             <div>
-                                <input type="text" value="" id="street" size="20" maxlength="34">
+                                <input type="text" value="" id="street">
                                 <p>番地など（例）東池袋3-1-4</p>
                             </div>
                             <div>
-                                <input type="text" value="" id="street2" size="20" maxlength="34">
+                                <input type="text" value="" id="street2">
                                 <p>建物名など（例）メゾンサンシャイン805号</p>
-                            </div>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>会社名</dt>
-                        <dd>
-                            <div>
-                                <input type="text" value="" id="companyname" size="20" maxlength="34">
-                            </div>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>お問い合わせ内容<strong>必須</strong></dt>
-                        <dd>
-                            <div>
-                                <textarea name="enquiry" id="enquiry" cols="60" rows="10"></textarea>
                             </div>
                         </dd>
                     </dl>
@@ -260,7 +302,7 @@
                 </div><!--footer-up-->
                 <div class="footer-dwn">
                     <div>
-                        <h4><a href="index.html" class="logo">ジェイ・エム・エス小倉　Tokyo Office</a></h4>
+                        <h4><a href="index.html" class="f-logo">ジェイ・エム・エス小倉　Tokyo Office</a></h4>
                         <p><a href="privacy.html" target="_blank">個人情報保護方針</a></p>
                     </div>
                     <small>Copyright &copy; JMS小倉 東京オフィス All Rights Reserved.</small>

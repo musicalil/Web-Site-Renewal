@@ -81,7 +81,7 @@ $gothic: 'NotoSansCJK-Regular';
 $mincho: 'Sawarabi Mincho';
 
 .container{//全体
-    width: 100%;
+    width: 400px + 650px + 300px;
     margin: 0 auto;
 }
 
@@ -518,16 +518,32 @@ footer{
         div{
             width: 50%;
             float: left;
-        .logo{
-            text-align: center;
+            display: flex;
+            align-items: center;
+        .f-logo{
+                text-align: left;
+                display: block;
+                text-indent: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                background-image: url(../images/logo.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                width: 200px;
+                height: 80px;
+                margin-left: 40px;
         }//.logo
-        p a{
+        p{
             color: #8f8f8f;
-//            display: block;
-            padding: 35px 50px;;
-            margin-left: 100px;
-        }//p a
-        }
+            width: 200px;
+            //height: 80px;
+            //float: right;
+            a{
+                color: $gray;
+            }
+        }//p
+        }//div
         small{
             margin-right: 20px;
             padding: 35px;
@@ -946,7 +962,7 @@ footer{
 .enquiry{//main
     width: 100%;
     h2{//タイトル
-        width: 800px;
+        width: 1024px;
         text-align: left;
         font-size: 1.5em;
         font-weight: bold;
@@ -956,34 +972,150 @@ footer{
 
 form{
     box-sizing: border-box;
-    width: 800px;
+    width: 1024px;
     margin: 0 auto;
     fieldset{
-        //display: flex;
-//        justify-content: space-between;
+        width: 100%;
+        display: table;
+        border-collapse: collapse;
+        margin-bottom: 50px;
         dl{
-            display: flex;
-//            justify-content: space-between;
-//            .left{
-//                width: 200px;
-//                float: left;
-//            }
-//            .right{
-//                width: 200px;
-//                float: right;
-//            }
-//            dt{
-//                width: 50px;
-//                float: left;
-//            }
-//            dd{
-//                width: 400px;
-//                float: left;
-//            }
+            display: table-row;
+            dt{
+                display: table-cell;
+                width: 25%;
+                background: #f5f5f5;
+                border: 1px solid #ccc;
+                padding: 0 24px;
+                vertical-align: top;
+                strong{
+                    background: #fff;
+                    padding: 1px 3px;
+                    color: $red;
+                    border: 1px solid $red;
+                }
+            }
+            dd{
+                display: table-cell;
+                border: 1px solid #ccc;
+                padding: 24px;
+                color: #4c4c4c;
+            }
+        }
+    }
+}
+.enquiry form fieldset .radio{
+    margin-right: 5px;
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 3px 3px 3px 20px;
+    cursor: pointer;
+    &:before{
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        margin-top: -9px;
+        width: 14px;
+        height: 14px;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 100%;
+    }
+}
+
+.enquiry form fieldset dl .postalcode{
+    display: flex;
+}
+
+.enquiry form fieldset dl dd{
+    .radiobutton {
+        display: none;
+    }
+    textarea{
+        width: 100%;
+        height: 10em;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        padding: 6px 16px;
+        box-sizing: border-box;
+        background: #fff;
+    }
+    input{
+        border: 1px solid #ccc;
+        width: 100%;
+        border-radius: 4px;
+        min-height: 44px;
+        padding: 6px 16px;
+        box-sizing: border-box;
+    }
+}
+
+.enquiry form fieldset dl dd .inputname{
+                border-collapse: collapse;
+                    .name{
+                        margin-right: 10px;
+                    }
+                    span{
+                        width: 35%;
+                        display: inline-block;
+                        input{
+                            width: 100%;
+                            display: inline-block;
+                        }
+                    }
+}
+
+.enquiry form .form2{
+    p{
+        margin-bottom: 20px;
+    }
+}
+
+.enquiry form .form2 .tel{
+    div{
+        //width: 20%;
+        display: table-cell;
+        }
+    .hyphen{
+        // width: 10%;
+        min-height: 1px;
+        //            margin: 0 10px;
+        box-sizing: border-box;
+        //text-align: center;
+        span{
+            padding: 0 20px;
         }
     }
 }
 
+.enquiry form .form2 .code{
+    width: 15%;
+}
+
+.enquiry form .form2 .adress{
+    position: relative;
+    &:before{
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 10px;
+        display: block;
+        width: 0;
+        height: 0;
+        margin: -2px 0 0 0;
+        border: 5px solid transparent;
+        border-top: 7px solid #000;
+    }
+    .state{
+        width: 100%;
+        display: block;
+        padding: 16px;
+        line-height: 1.6;
+    }
+
+}
 //-------------------------enquiry.html--------------------------//
 
 //-------------------------privacy.html--------------------------//
