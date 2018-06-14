@@ -80,39 +80,34 @@ $serif: 'Kameron';
 $gothic: 'NotoSansCJK-Regular';
 $mincho: 'Sawarabi Mincho';
 
+a{
+    text-decoration: none;
+}
+
 .container{//全体
     width: 400px + 650px + 300px;
     margin: 0 auto;
 }
 
-a{
-    text-decoration: none;
-}
-
 //ヘッダー
-header{//KV
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
 .header{//ヘッダーメニュー
+        width: 100%;
         background: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1;
         box-shadow: 0 1px 17px 0 rgba(50, 50, 50, .15);
-    }//.header
-}//header
+    }//header
     
-header .header .logo{//ヘッダーロゴ
+.header .logo{//ヘッダーロゴ
         margin-left: 40px;
     }//.logo
     
-header .header .gnav{//nav
+.header .gnav{//nav
         width: 650px;
         ul{
             height: 80px;
@@ -141,7 +136,7 @@ header .header .gnav{//nav
         }//ul
     }//.gnav
 
-header .header .header-right{//ヘッダー右メニュー
+.header .header-right{//ヘッダー右メニュー
         display: flex;
         justify-content: center;
         align-items: center;
@@ -184,7 +179,7 @@ header .header .header-right{//ヘッダー右メニュー
         }//a
     }//.header-right
 
-header h2{
+    h2{
         position: absolute;
         font-family: $mincho;
         font-size: 220%;
@@ -196,6 +191,13 @@ header h2{
 //---------------------------共通----------------------------//
 
 //---------------------------index.html----------------------------//
+
+.kv{
+    background: url(../images/Mr.Sai.jpg) no-repeat;
+    background-size: cover;
+    height: 850px;
+    margin-bottom: 95px;
+}//kv
 
 .num{//.num
     width: 100%;
@@ -497,7 +499,7 @@ footer{
         border-top: 1px solid #e6e6e6;
         text-align: center;
         overflow: hidden;
-        padding: 40px auto;
+        padding: 20px 0;
         div{
             float: left;
             display: flex;
@@ -524,6 +526,13 @@ footer{
 //---------------------------共通----------------------------------//
 
 //-------------------------married.html----------------------------//
+.kv2{
+    background: url(../images/header2.jpg) no-repeat;
+    background-size: cover;
+    height: 850px;
+    margin-bottom: 95px;
+}
+    
 .page2, .page3{//h2
     color: $black;
 }
@@ -540,14 +549,14 @@ footer{
             line-height: 1.5;
     }
         h3{
-        font:{
-            family: $gothic;
-            size: 1.8em;
             text-align: left;
-        }
-        margin-bottom: 40px;
-    }
-}
+            margin-bottom: 40px;
+            font:{
+                family: $gothic;
+                size: 1.8em;
+            }
+        }//h3
+}//.married
 
 .phase{//section
     display: flex;
@@ -625,13 +634,10 @@ footer{
             }//.dt
             dd{
                 color: $gray;
-                font:{
-                    size: 0.9em;
-                    weight: thin;
-                }
+                font-size: 0.9em;
                 padding: 30px;
                 line-height: 2;
-                letter-spacing: 0.2;
+                letter-spacing: 0.2px;
             }//dd
         }//dl
 .phase dl{//step2
@@ -651,6 +657,13 @@ footer{
 //-------------------------married.html----------------------------//
 
 //-------------------------price.html----------------------------//
+
+.kv3{
+    background: url(../images/header3.jpg) no-repeat;
+    background-size: cover;
+    height: 850px;
+    margin-bottom: 95px;
+}
 
 .price{//main
     max-width: 1200px;
@@ -714,7 +727,7 @@ footer{
         span{
             display: inline-block;
             font-size: 0.6em;
-            font-weght: bold;
+            font-weight: bold;
         }//span
         a{
             display: block;
@@ -854,7 +867,7 @@ footer{
             color: $black;
             .right{//矢印
                 color: $red;
-                opacty: 0.6;
+                opacity: 0.6;
                 margin-right: 10px;
             }//.right
         }//.privacy
@@ -863,30 +876,24 @@ footer{
 //-------------------------price.html----------------------------//
 
 //-------------------------company.html--------------------------//
-
-.page4{//header
-    margin-bottom: 80px + 95px;
-}//.page4
-
 .company{//main
     width: 100%;
-    margin: 0 auto;
+    margin-top: 80px + 95px;
     h2{//タイトル
         width: 980px;
         text-align: left;
         font-size: 1.5em;
         font-weight: bold;
-        margin: 0 auto 95px;
+        margin-bottom: 95px;
     }//h2
 }//.company
 
 .company{//会社概要
-    width: 100%;
     box-sizing: border-box;
         section{//
-            display: flex;
-            justify-content: center;
-            flex-flow: wrap;
+//            display: flex;
+//            justify-content: center;
+//            flex-flow: wrap;
             margin: 0 auto;
             font-family: $gothic;
             margin-bottom: 95px;

@@ -58,42 +58,38 @@ table {
 body {
   font-family: 'Kameron', 'NotoSansCJK-Regular', 'Verdana', 'Arial', '游ゴシック Medium', '游ゴシック体', 'YuGothic', 'YuGothic M','メイリオ', 'Meiryo', 'ヒラギノ角ゴシック', 'Hiragino Sans', 'Roboto', 'Droid Sans', 'sans-serif'; }
 
+a {
+  text-decoration: none; }
+
 .container {
   width: 1350px;
   margin: 0 auto; }
 
-a {
-  text-decoration: none; }
-
-header {
+.header {
   width: 100%;
-  text-align: center;
-  margin-bottom: 30px; }
-  header .header {
-    background: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    -webkit-box-shadow: 0 1px 17px 0 rgba(50, 50, 50, 0.15);
-    box-shadow: 0 1px 17px 0 rgba(50, 50, 50, 0.15); }
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-box-shadow: 0 1px 17px 0 rgba(50, 50, 50, 0.15);
+  box-shadow: 0 1px 17px 0 rgba(50, 50, 50, 0.15); }
 
-header .header .logo {
+.header .logo {
   margin-left: 40px; }
 
-header .header .gnav {
+.header .gnav {
   width: 650px; }
-  header .header .gnav ul {
+  .header .gnav ul {
     height: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -105,22 +101,22 @@ header .header .gnav {
     -ms-flex-align: center;
     align-items: center;
     margin: 0 auto; }
-    header .header .gnav ul li {
+    .header .gnav ul li {
       width: 130px;
       text-align: center;
       border-left: 0.2px solid #000; }
-      header .header .gnav ul li:last-child {
+      .header .gnav ul li:last-child {
         border-right: 0.2px solid #000; }
-      header .header .gnav ul li a {
+      .header .gnav ul li a {
         height: 19px;
         color: #2d2d2d;
         display: block;
         line-height: 19px;
         font-size: 85%; }
-        header .header .gnav ul li a:hover {
+        .header .gnav ul li a:hover {
           opacity: 0.5; }
 
-header .header .header-right {
+.header .header-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,17 +131,17 @@ header .header .header-right {
   margin-right: 40px;
   letter-spacing: 2px;
   text-align: center; }
-  header .header .header-right .tel {
+  .header .header-right .tel {
     width: 150px;
     height: 30px;
     line-height: 30px;
     font-family: "NotoSansCJK-Regular";
     font-weight: bold;
     background: #1f4fa4; }
-    header .header .header-right .tel .telicon {
+    .header .header-right .tel .telicon {
       font-size: 80%;
       padding-right: 5px; }
-  header .header .header-right a {
+  .header .header-right a {
     width: 150px;
     height: 30px;
     line-height: 30px;
@@ -153,9 +149,9 @@ header .header .header-right {
     color: #fff;
     background: #1f4fa4;
     display: block; }
-    header .header .header-right a .mailicon {
+    .header .header-right a .mailicon {
       padding-right: 5px; }
-    header .header .header-right a span {
+    .header .header-right a span {
       font-weight: bold;
       border-radius: 8px;
       background: #fff;
@@ -163,13 +159,19 @@ header .header .header-right {
       padding: 0 8px;
       margin-right: 5px; }
 
-header h2 {
+h2 {
   position: absolute;
   font-family: "Sawarabi Mincho";
   font-size: 220%;
   color: #fff;
   top: 50%;
   right: 20px; }
+
+.kv {
+  background: url(../images/Mr.Sai.jpg) no-repeat;
+  background-size: cover;
+  height: 850px;
+  margin-bottom: 95px; }
 
 .num {
   width: 100%; }
@@ -442,7 +444,7 @@ footer {
     border-top: 1px solid #e6e6e6;
     text-align: center;
     overflow: hidden;
-    padding: 40px auto; }
+    padding: 20px 0; }
     footer .footer-dwn div {
       float: left;
       display: -webkit-box;
@@ -464,6 +466,12 @@ footer {
       padding: 35px;
       float: right; }
 
+.kv2 {
+  background: url(../images/header2.jpg) no-repeat;
+  background-size: cover;
+  height: 850px;
+  margin-bottom: 95px; }
+
 .page2, .page3 {
   color: #2d2d2d; }
 
@@ -479,10 +487,10 @@ footer {
     margin: 0 auto 70px;
     line-height: 1.5; }
   .married h3 {
+    text-align: left;
+    margin-bottom: 40px;
     font-family: "NotoSansCJK-Regular";
-    font-size: 1.8em;
-    font-text-align: left;
-    margin-bottom: 40px; }
+    font-size: 1.8em; }
 
 .phase {
   display: -webkit-box;
@@ -555,10 +563,9 @@ footer {
   .phase dl dd {
     color: #8f8f8f;
     font-size: 0.9em;
-    font-weight: thin;
     padding: 30px;
     line-height: 2;
-    letter-spacing: 0.2; }
+    letter-spacing: 0.2px; }
 
 .phase dl {
   position: relative; }
@@ -569,6 +576,12 @@ footer {
     color: #fff;
     text-align: center;
     line-height: 2; }
+
+.kv3 {
+  background: url(../images/header3.jpg) no-repeat;
+  background-size: cover;
+  height: 850px;
+  margin-bottom: 95px; }
 
 .price {
   max-width: 1200px;
@@ -632,7 +645,7 @@ footer {
     .price dl dt span {
       display: inline-block;
       font-size: 0.6em;
-      font-weght: bold; }
+      font-weight: bold; }
     .price dl dt a {
       display: block;
       color: #fff;
@@ -762,35 +775,23 @@ footer {
   color: #2d2d2d; }
   .price div .privacy .right {
     color: #ff0000;
-    opacty: 0.6;
+    opacity: 0.6;
     margin-right: 10px; }
-
-.page4 {
-  margin-bottom: 175px; }
 
 .company {
   width: 100%;
-  margin: 0 auto; }
+  margin-top: 175px; }
   .company h2 {
     width: 980px;
     text-align: left;
     font-size: 1.5em;
     font-weight: bold;
-    margin: 0 auto 95px; }
+    margin-bottom: 95px; }
 
 .company {
-  width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
   .company section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-flow: wrap;
-    flex-flow: wrap;
     margin: 0 auto;
     font-family: "NotoSansCJK-Regular";
     margin-bottom: 95px; }
