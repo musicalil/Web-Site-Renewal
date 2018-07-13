@@ -6,40 +6,54 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="description" content="JMS小倉 東京オフィスはトータル費用でもサポート内容でも自信のある料金プランをご用意いたしております。">
 <title>料金プラン - 東京 池袋の結婚相談所｜JMS小倉 東京オフィス</title>
-<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Kameron:400,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<div class="container"><!--全体-->
-	<header id="header" class="header"><!--ヘッダー-->
-     <h1 class="logo"><a href="index.html"><img src="images/logo.png" width="400" height="19" alt="ジェイ・エム・エス小倉　Tokyo Office"></a></h1>
-            <nav class="gnav"><!--グローバルナビ-->
-			<ul>
-				<li><a class="gnav0" href="index.html">ホーム</a></li>
-				<li><a class="gnav1" href="married.html">ご成婚までの流れ</a></li>
-				<li><a class="gnav2" href="price.html">料金プラン</a></li>
-				<li><a class="gnav3" href="company.html">会社概要</a></li>
-				<li><a class="gnav4" href="http://jmsk.tokyo/blog/">ブログ</a></li>
-			</ul>
-		  </nav><!--gnav-->
-            <div class="header-right"><!--ヘッダー右メニュー-->
-                <p class="tel"><i class="fas fa-phone telicon"></i>03-3527-9015</p>
-                <a href="enquiry.html"><p><i class="far fa-envelope mailicon"></i><span>無料</span>資料請求</p></a>
-            </div><!--header-right-->
-        </header><!--header-->
-    </div><!--container-->
-    <header class="kv3"><h2 class="page3">料金プラン</h2></header><!--header-->
-    <div class="container">
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!--fontawesome CDN-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!--GoogleフォントKameron-->
+    <link href="https://fonts.googleapis.com/css?family=Kameron:400,700" rel="stylesheet">
+    <!--GoogleフォントSawarabimincho-->
+    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
+    <!--CSS_SPファイル読み込み-->
+    <link rel="stylesheet" href="css/style_sp.css" media="screen and (max-width: 767px)">
+    <!--CSSファイル読み込み-->
+    <link rel="stylesheet" href="css/style.css" media="print,screen and (min-width: 768px)">
+    <!--jQuery CDN読み込み-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--jQueryファイル読み込み-->
+    <script src="scripts/jquery.js"></script>
+    </head>
+    <body>
+        <header><!--ヘッダー-->
+            <div class="header_inner">
+                <h1 class="logo"><a href="index.html">
+                    <picture>
+                        <source srcset="images/logo@2x.png" media="(max-width: 767px)">
+                        <img src="images/logo.png" alt="ジェイ・エム・エス小倉　Tokyo Office">
+                    </picture>
+                    </a></h1>
+                <nav class="gnav"><!--グローバルナビ-->
+                    <ul>
+                        <li><a class="gnav0" href="index.html">ホーム</a></li>
+                        <li><a class="gnav1" href="married.html">ご成婚<span>までの</span><span>流れ</span></a></li>
+                        <li><a class="gnav2" href="price.html">料金<span>プラン</span></a></li>
+                        <li><a class="gnav3" href="company.html">会社概要</a></li>
+                        <li><a class="gnav4" href="http://jmsk.tokyo/blog/">ブログ</a></li>
+                        <li><p class="tel"><i class="fas fa-phone telicon"></i>03-3527-9015</p></li>
+                        <li><a class="gnav6" href="enquiry.html"><p><i class="far fa-envelope mailicon"></i><span>無料</span>資料請求</p></a></li>
+                    </ul>
+                </nav><!--gnav-->
+            </div>
+        </header><!--#header-->
+    <div class="kv3"><h2 class="lede3">料金プラン</h2></div><!--header-->
 	<main class="price"><!--メイン-->
 		<section><!--料金-->
             <h3>スタンダードプラン（1年間）</h3>
             <dl>
                 <dt>
-                    入会時のご負担<strong>240,000</strong><span>円（税込 259,200円）</span><a href="#">内訳<i class="fas fa-plus-square plus"></i></a>
+                    入会時のご負担<div><strong>240,000</strong><span>円</span></div><span class="pre">（税込 259,200円）</span><button class="button">内訳</button>
                 </dt>
-                <dd>
+                <dd class="inner">
                     <div>
                     入会金
                     <strong>30,000<span>円</span></strong>
@@ -55,7 +69,7 @@
             </dl>
             <dl class="marriage">
                 <dt>成婚料</dt>
-                <dd><strong>100,000</strong>円（税込 108,000円）</dd>
+                <dd><strong>100,000</strong>円<span>（税込 108,000円）</span></dd>
             </dl>
             <div>
                 <h4>お見合い料：無料！</h4>
@@ -69,7 +83,7 @@
             <h3>2年目以降について</h3>
             <dl class="marriage">
                 <dt>月会費</dt>
-                <dd><strong>4,300</strong>円（税込4,644円）</dd>
+                <dd><strong>4,300</strong>円<span>（税込4,644円）</span></dd>
             </dl>
             <div>
                 <p>2年目以降は、再度の入会金・登録料、または更新料などは不要です。</p>
@@ -106,47 +120,74 @@
             </div>
         </section>
 	</main><!--main-->
-    <aside>
-        <div><a href="enquiry.html">資料請求・お問い合わせは<br>こちらからどうぞ</a></div>
-    </aside>
-    </div><!--container-->
-    <footer><!--フッター-->
-        <div class="pagetop">
-            <a href="#header"><i class="top fas fa-chevron-up"></i><br>PAGE TOP</a>
-        </div><!--トップへ-->
-        <div class="footer-up">
-            <a href="https://www.facebook.com/jmsktokyo/" target="_blank"><!--FBLINK-->
-                <i class="fb fab fa-facebook"></i>
-                <p>JMS小倉東京オフィスFacebook</p>
-            </a><!--FBLINK-->
-            <a href="http://jms-kokura.jp/index.html" target="_blank">
-                <div><img class="footer-l" src="images/kokuralogo.png" width="150" height="10" alt="JMS小倉本社。北九州市／小倉の結婚相談ならJMS（ジェイエムエス）"></div>
-                <p>JMS小倉本社<br>北九州市／小倉の結婚相談なら<br>JMS（ジェイエムエス）</p>
-            </a><!--小倉本社-->
-            <a href="http://ma-lien.com" target="_blank">
-                <img src="images/marriage.png" width="86" height="45" alt="Marriage-Lien（マリアージュ・リアン）佐賀・福岡・長崎の結婚相談所">
-                <p>Marriage-Lien<br>（マリアージュ・リアン）<br>佐賀・福岡・長崎の結婚相談所</p>
-            </a><!--マリアージュ・リアン-->
-            <a href="http://www.nakoudonet.com/" target="_blank">
-                <img src="images/nakoudo.gif" width="135" height="45" alt="結婚相談所の独立開業なら仲人ネットコム">
-                <p>仲人ネットコム</p>
-            </a>
-            <a href="http://www.jba-e.com" target="_blank">
-                <img src="images/jba.gif" width="143" height="45" alt="日本結婚相談協会">
-                <p>日本結婚相談協会</p>
-            </a>
-            <a href="http://www.jmic.gr.jp" target="_blank">
-                <img src="images/jmic.gif" width="133" height="45" alt="結婚相手紹介サービス協会">
-                <p>結婚相手紹介サービス協会</p>
-            </a>
-    </div><!--footer-up-->
-    <div class="footer-dwn">
-        <div>
-            <h4><a href="index.html"><img src="images/f-logo.png" width="188" height="10" alt="ジェイ・エム・エス小倉　Tokyo Office"></a></h4>
-            <p><a href="privacy.html" target="_blank">個人情報保護方針</a></p>
-        </div>
-		<small>Copyright &copy; JMS小倉 東京オフィス All Rights Reserved.</small>
-    </div><!--footer-dwn-->
-	</footer><!--footer-->
-</body>
+        <aside>
+            <div><a href="enquiry.html">資料請求・お問い合わせ<br><span>お気軽にどうぞ</span></a></div>
+            <ul>
+                <li><a class="tel" href="tel:0335279015"><i class="fas fa-phone telicon"></i>03-3527-9015</a></li>
+                <li><a class="gnav6" href="enquiry.html"><p><i class="far fa-envelope mailicon"></i><span>無料</span>資料請求</p></a></li>
+            </ul>
+        </aside>
+        <footer><!--フッター-->
+            <div class="footer_inner">
+                <div class="pagetop">
+                    <a href="#top"><i class="top fas fa-chevron-up"></i><br>PAGE TOP</a>
+                </div><!--トップへ-->
+                <div class="footer-up">
+                    <a href="https://www.facebook.com/jmsktokyo/" target="_blank"><!--FBLINK-->
+                        <i class="fb fab fa-facebook"></i>
+                        <p>JMS小倉東京オフィスFacebook</p>
+                    </a><!--FBLINK-->
+                    <a href="http://jms-kokura.jp/index.html" target="_blank">
+                        <div>
+                            <picture>
+                                <source srcset="images/kokuralogo@2x.png" media="(max-width: 767px)">
+                                <img class="footer-l" src="images/kokuralogo.png" alt="JMS小倉本社。北九州市／小倉の結婚相談ならJMS（ジェイエムエス）">    
+                            </picture>
+                        </div>
+                        <p>JMS小倉本社<i class="fas fa-external-link-alt"></i><br>北九州市／小倉の結婚相談なら<br>JMS（ジェイエムエス）</p>
+                    </a><!--小倉本社-->
+                    <a href="http://ma-lien.com" target="_blank">
+                        <picture>
+                            <source srcset="images/marriage@2x.png" media="(max-width: 767px)">
+                            <img src="images/marriage.png" alt="Marriage-Lien（マリアージュ・リアン）佐賀・福岡・長崎の結婚相談所">
+                        </picture>
+                        <p>Marriage-Lien<i class="fas fa-external-link-alt"></i><br>（マリアージュ・リアン）<br>佐賀・福岡・長崎の結婚相談所</p>
+                    </a><!--マリアージュ・リアン-->
+                    <a href="http://www.nakoudonet.com/" target="_blank">
+                        <picture>
+                            <source srcset="images/nakoudo@2x.gif" media="(max-width: 767px)">
+                            <img src="images/nakoudo.gif" alt="結婚相談所の独立開業なら仲人ネットコム">
+                        </picture>
+                        <p>仲人ネットコム<i class="fas fa-external-link-alt"></i></p>
+                    </a>
+                    <a href="http://www.jba-e.com" target="_blank">
+                        <picture>
+                            <source srcset="images/jba@2x.gif" media="(max-width: 767px)">
+                            <img src="images/jba.gif" alt="日本結婚相談協会">
+                        </picture>
+                        <p>日本結婚相談協会<i class="fas fa-external-link-alt"></i></p>
+                    </a>
+                    <a href="http://www.jmic.gr.jp" target="_blank">
+                        <picture>
+                            <source srcset="images/jmic@2x.gif" media="(max-width: 767px)">
+                            <img src="images/jmic.gif" alt="結婚相手紹介サービス協会">
+                        </picture>
+                        <p>結婚相手紹介サービス協会<i class="fas fa-external-link-alt"></i></p>
+                    </a>
+                </div><!--footer-up-->
+                <div class="footer-dwn">
+                    <div>
+                        <h4><a href="index.html">
+                            <picture>
+                                <source srcset="images/f-logo@2x.png" media="(max-width: 767px)">
+                                <img src="images/f-logo.png" alt="ジェイ・エム・エス小倉　Tokyo Office">    
+                            </picture>
+                            </a></h4>
+                        <p><a href="privacy.html">個人情報保護方針</a></p>
+                    </div>
+                    <small>Copyright &copy; JMS小倉 東京オフィス All Rights Reserved.</small>
+                </div><!--footer-dwn-->
+            </div>
+        </footer><!--footer-->
+    </body>
 </html>

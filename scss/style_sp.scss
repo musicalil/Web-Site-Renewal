@@ -75,8 +75,14 @@ a{//リンク
     text-decoration: none;
 }
 
+img{
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
 .container{//全体
-    max-width: 980px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -95,110 +101,78 @@ $mincho: 'Sawarabi Mincho';
 //---------------------------header共通----------------------------------//
 
 //ヘッダー
-header{//ヘッダー全体
+header .header_inner{//ヘッダー全体
     background: #fff;
     width: 100%;
-    height: 120px;
-    position: fixed;
-    box-shadow: 0 1px 17px 0 rgba(50, 50, 50, .15);
-    z-index: 10;
-    }//header
-
-header .header_inner{//ヘッダー中心
-    width: 1200px;
-    background: #fff;
     display: flex;
     flex-flow: wrap;
-    align-items: center;
     text-align: center;
-    padding: 1em 20px;
-    position: fixed;
-    //影
-    top: 0;
-    left: 50%;
-    margin-left: -1*1100px/2;
-    z-index: 11;
 }//header
 
+header{
+    h1{
+        order: 2;
+    }
+    .gnav{
+        order: 1;
+    }
+}
+
 header h1{
-    padding-left: 30px;
+    width: 90%;
+    height: 110px;
+    margin: 0 auto;
+    position: relative;
+    top: 75px;
 }
     
 header .gnav{//nav
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        background: #e6e6e6;
+        box-shadow: 0 1px 17px 0 rgba(50, 50, 50, 0.15);
+        z-index: 10;
+        padding: 10px 0;
         ul{
             display: flex;
             flex-flow: wrap;
-            justify-content: space-between;
             align-items: center;
-            margin: 0 30px;
             li{
-                &:nth-child(-n+5){//最初から5番目まで
-                    border-left: 0.2px solid #000;
-                    padding: 0 25px;
-                }//nth-child(-n+5)
-                &:nth-child(5){//5番目だけ
-                    border-right: 0.2px solid #000;
-                }//nth-child(5)
+                width: 20%;
+                height: 42px;
+                display: flex;
+                flex-direction : column;
+                justify-content:center;
+                &:nth-child(-n+4){//最初から4番目まで
+                    border-right: 0.1px solid #cfcfcf;
+                }//nth-child(-n+4)
+                &:nth-child(n+6){//6番目から最後まで
+                    display: none;
+                }//nth-child(n+6)
                 a{
-                    color: $black;
+                    color: $gray;
                     display: block;
-                    line-height: 1.2;
-                    font-size: 85%;
-                    &:hover{
-                        opacity: 0.5;
-                    }//hover
+                    font-size: 75%;
+                    padding: 0.3em 2%;
+                    line-height: 1.15;
+                    letter-spacing: .15em;
+                    span:before{
+                        content: "\A";
+                        white-space: pre;
+                    }
                 }//a   
             }//li
         }//ul
     }//.gnav
 
-header .gnav .tel,
-        .gnav6 p{//ヘッダー右メニュー
-            color: #fff;
-            background: $blue;
-            font-family: $gothic;
-            font-size: 1.2em;
-            letter-spacing: 2px;
-            padding: 0.6em 10px;
-}
- 
-header .gnav .tel{//電話番号
-        margin-left: 60px;
-            .telicon{
-                font-size: 1.3em;
-                padding-right: 5px;
-            }//.telicon
-        }//.tel
-
-header .gnav .gnav6{//無料資料請求
-            display: block;
-            margin-left: 20px;
-            color: #fff;
-            .mailicon{
-                font-size: 1.5em;
-                padding-right: 5px; 
-            }//.mailicon
-            span{
-                font-size: 1em;
-                font-weight: bold;
-                border-radius: 8px;
-                background: #fff;
-                color: $blue;
-                padding: 0 8px;
-                margin-right: 5px;
-            }//span
-            p{
-            font-size: 1.3em;
-        }
-    }//#header .gnav .gnav6
-
 .lede, .lede2, .lede3{
         position: absolute;
         font-family: $mincho;
-        font-size: 220%;
-        color: #fff;
-        top: 50%;
-        right: 20px;
+        font-size: 110%;
+        color: $gray;
+        bottom: 50%;
+        left: 5%;
 }//h2
 
 .wrap{//会社概要/資料請求/個人情報保護方針
@@ -208,34 +182,72 @@ header .gnav .gnav6{//無料資料請求
 //---------------------------header共通----------------------------------//
 
 //---------------------------aside, footer共通----------------------------------//
-aside{//pc
-    text-align: center;
-    margin-bottom: 95px; 
-    a{
-        display: inline-block;
-        color: #fff;
-        background: #1f4fa4;
-        text-align: center;
-        padding: 22px;
-        font-family: $mincho;
-        font-size: 1.4em;
-        letter-spacing: 0.02em;
-        line-height: 2;
-        span{
-            font-size: 0.8em;
-        }
-    }//a
+aside{//PC
+    div{
+        display: none;   
+    }
 }//aside
 
 aside{//SP
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
     ul{
-        display: none;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #e6e6e6;
+        li{
+            width: 50%;
+            text-align: center;
+            .tel,
+            .gnav6 p{//コンバージョン
+                font-family: $gothic;
+                font-size: 1em;
+                letter-spacing: 0.1em;
+                padding: 0.8em 5px;
+            }//.tel, .gnav p   
+        }//li
     }//ul
 }//aside
+
+aside .tel{//電話番号
+    display: block;
+    color: $blue;
+    background: #fff;
+    .telicon{
+        font-size: 1em;
+        padding-right: 5px;
+    }//.telicon
+}//.tel
+
+aside .gnav6{//無料資料請求
+    display: block;
+    color: #fff;
+    background: $blue;
+    .mailicon{
+        font-size: 1em;
+        padding-right: 5px; 
+    }//.mailicon
+    span{
+        font-size: 0.8em;
+        font-weight: bold;
+        border-radius: 8px;
+        background: #fff;
+        color: $blue;
+        padding: 0 5px;
+        margin-right: 5px;
+    }//span
+    p{
+        font-size: 1em;
+    }
+}//.gnav6
 
 footer{
     width: 100%;
     background: #f3f8f8;
+    margin-bottom: 40px;
 }
 
 .footer_inner{
@@ -243,7 +255,6 @@ footer{
     background: #f3f8f8;
     letter-spacing: .07em;
     line-height: 1.2;
-    padding-bottom: .8em;
     .pagetop{
         border-bottom: 1px solid #e6e6e6;
         text-align: center;
@@ -261,108 +272,93 @@ footer{
         }//a
     }//.pagetop
     .footer-up{
+        width: 100%;
         background: #f6f6f6;
-        padding: 2em 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 2em 10%;
+        margin: 0 auto;
+        border-bottom: 1px solid #e6e6e6;
         .fb{
             display: block;
             font-size: 45px;
             color: $blue;
-            width: 150px;
-            text-align: center;
+            text-align: left;
+            & + p{
+                display: none;
+            }
         }//.fb
         a{
             display: block;
-            margin-right: 50px;
-            &:last-child{
-                margin-right: 0;
-            }
         }//a
-        .footer-l{
-            display: block;
-            text-align: center;
-            padding: 1em 0;
-        }//.footer-l
-        img{
-            display: block;
-            margin: 0 auto;
+        picture{
+            display: none;
         }//img
         p{
             font-size: 70%;
-            text-align: center;
-            margin-top: 16px;
+            margin-top: 30px;
             color: #8f8f8f;
+            i{
+                padding-left: 3%;
+            }
         }//p
     }//.footer-up    
     .footer-dwn{
+        width: 80%;
         background: #f6f6f6;
         color: #8f8f8f;
-        font-size: 70%;
-        border-top: 1px solid #e6e6e6;
+        font-size: 60%;
         text-align: center;
-        overflow: hidden;
-        padding: 3.5em 0;
+        padding: 2em 0;
+        margin: 0 auto;
         div{
-            float: left;
             display: flex;
             align-items: center;
+            margin-bottom: 5px;
             h4{
-                text-align: left;
-                margin-left: 40px;
+                width: 65%;
             }//.logo
             p{
-                width: 200px;
                 a{
                     color: #8f8f8f;
                 }
             }//p
         }//div
         small{
-            margin-right: 20px;
-            float: right;
-        }//small
+            letter-spacing: .01em;
+        }
     }//.footer-dwn
 }//footer
-
-footer .footer-up i{
-    display: none;
-}
 //---------------------------aside, footer共通----------------------------------//
 
 //---------------------------index.html----------------------------//
 
 .kv1{
-    background: url(../images/Mr.Sai.jpg) no-repeat;
+    background: url(../images/Mr.Sai@2x.jpg) no-repeat;
     background-size: cover;
-    min-height: 100vh;
-    margin-bottom: 95px;
+    height: 254.5px;
 }//kv
 
 .num{//.num
-    width: 100%;
+    margin: 30px auto 0;
     ul{
         display: flex;
         justify-content: center;
+        flex-flow: wrap;
         align-items: center;
         text-align: center;
-        margin-bottom: 95px;
         li{
-            width: 250px;
-            height: 250px;
+            width: 175px;
+            height: 175px;
             border-radius: 50%;
             background: #e87d0c;
             color: #fff;
-            margin-right: 30px;
-            font-size: 1.4em;
+            font-size: 1em;
             font-weight: bold;
             display: inline-block;
             position: relative;
             line-height: 1.5;
-            &:last-child{
-                margin-right: 0;
-            }//li:last-child
+            &:first-child{
+                margin-right: 10px;
+            }//li + li
             span{
                 font-size: 2em;
             }//span
@@ -373,7 +369,7 @@ footer .footer-up i{
                 position: absolute;
                 top: 50%;
                 left: 0%;
-                width: 250px;
+                width: 175px;
                 text-align: center;
                 -ms-transform: translateY(-50%);
                 -webkit-transform: translateY(-50%);
@@ -383,54 +379,12 @@ footer .footer-up i{
     }//ul
 }//.num
 
-//トップメニュー
-.menu{
-    display: none;
-    padding: 95px 240px;
-    width: 980px;
-    margin: 0 auto;
-    ul{
-        display: flex;
-        flex-wrap: wrap;
-        li{
-         border: 3px solid #fff;
-         margin-right: 76px;
-         margin-bottom: 76px;
-         padding: 0;
-         position: relative;
-            &:nth-child(3n){
-                margin-right: 0;
-            }//nth-child(3n)
-            &:nth-child(n+4){
-                margin-bottom: 0;
-            }//nth-child(n+4)
-        a{
-            line-height: 0;
-            display: block;
-            h3{
-                padding: 0.8em 10px;
-                font-size: 100%;
-                background-color: #000;
-                color: #fff;
-                position: absolute;
-                bottom: 10px;
-                left: -20px;
-                line-height: 1em;
-            }//h3
-        }//a
-        }//li
-    }//ul
-}//menu
-
-
 main{
     width: 100%;
-    margin-bottom: 95px;
+    margin: 30px auto;
     .main1{
-        width: 980px;
-        margin: 0 auto 95px;
         h3{
-            font-size: 3em;
+            font-size: 1.2em;
             font-weight: bold;
             text-align: center;
             color: $red;
@@ -438,18 +392,20 @@ main{
         }//h3
         h4{
             font-family: $mincho;
-            font-size: 1em;
+            font-size: 0.6em;
             font-weight: bold;
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: 20px;
         }//h4
         ul{
             li{
+                width: 110px;
+                height: 110px;
                 img{
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
                 }//img
                     p{
-                        font-size: 100%;
+                        font-size: 50%;
                         font-weight: 800;
                         color: #000;
                         text-align: center;
@@ -464,6 +420,7 @@ main{
             .up{
                 display: flex;
                 justify-content: space-around;
+                flex-flow: wrap;
                 li{
                     margin-right: 20px;
                     margin-bottom: 45px;
@@ -475,6 +432,7 @@ main{
         .dwn{
             display: flex;
             justify-content: center;
+            flex-flow: wrap;
             li{
                 margin-right: 20px;
                 &:last-child{
@@ -484,58 +442,55 @@ main{
         }//.dwn
     }//.main1
     .main2{
-            width: 980px;
-            margin: 0 auto 95px;
+            padding-top: 30px;
+            margin: 70px auto 30px;
             position: relative;
             counter-reset: section;
             h3{
-                font-size: 3em;
+                font-size: 1.1em;
                 font-weight: bold;
                 text-align: center;
                 color: $red;
-                margin-bottom: 45px;
+                margin-bottom: 20px;
             }//h3
             ul{
-                box-sizing: border-box;
                 li{
+                    width: 85%;
+                    background: #f6f6f6;
                     display: flex;
                     justify-content: space-between;
-                    border: 0.5px solid $blue;
-                    border-radius: 5px;
-                    padding: 40px;
-                    margin: 90px auto 50px;
+                    flex-flow: wrap;
+                    padding: 15px;
+                    margin: 0 auto 30px;
                     position: relative;
                         div{
-                            height: 300px;
                             &:before{
                                 counter-increment: section;
                                 content: counter(section);
-                                font-size: 50px;
+                                font-size: 25px;
                                 font-weight: bold;
                                 text-align: center;
                                 position: absolute;
-                                top: -25px;
-                                left: -25px;
-                                width: 60px;
-                                height: 60px;
+                                top: -15px;
+                                left: -15px;
+                                width: 30px;
+                                height: 30px;
                                 border-radius: 50%;
                                 color: #fff;
                                 background: $orange;
                                 line-height: 1.3;
                             }//before
                         h4{
-                            font-size: 150%;
+                            font-size: 100%;
                             font-weight: bold;
                             color: $orange;
-                            margin-bottom: 30px;
+                            margin-bottom: 10px;
                         }//h4
                         p{
                             line-height: 1.8;
-                            font-size: 85%;
+                            font-size: 60%;
+                            margin-bottom: 10px;
                         }//p
-                        .m3{
-                            padding-top: 25px;
-                            }
                 }//div
             }//li
         }//ul
@@ -545,52 +500,50 @@ main{
     
 //-------------------------married.html----------------------------//
 .kv2{
-    background: url(../images/header2.jpg) no-repeat;
+    background: url(../images/header2@2x.jpg) no-repeat;
     background-size: cover;
-    min-height: 100vh;
-    margin-bottom: 95px;
+    height: 254.5px;
     .lede2{
-        color: $black;
-        opacity: 0.5;
+        color: #fff;
+        opacity: .8;
     }
 }
 
 .married{//main
-    max-width: 1200px;
-    display: flex;
-    flex-flow: wrap;
-    margin: 0 auto 95px;
+    margin: 10px auto 30px;
     counter-reset: count;
         .intro{
+            width: 80%;
             color: $gray;
             font-family: $mincho;
-            font-size: 1em;
+            font-size: .7em;
             text-align: center;
-            margin: 0 auto 70px;
+            margin: 0 auto 30px;
             line-height: 1.5;
     }
         h3{
-            width: 100%;
+            width: 90%;
             text-align: left;
-            margin-bottom: 40px;
+            margin: 0 auto 20px;
             font:{
                 family: $gothic;
-                size: 1.8em;
+                size: 1.1em;
             }
         }//h3
 }//.married
 
-.phase{//sections
+.phase{//section全体
+    width: 90%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    margin: 0 auto 95px;
+    margin: 0 auto 30px;
     position: relative;
         &:before{//矢印
             content: "";
-            width: 70px;
+            width: 30px;
             background: $orange;
             opacity: 0.3;
+            display: block;
         }
         &:after{//矢印先端
             content: "";
@@ -598,112 +551,126 @@ main{
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 35px 35px 0 35px;
+            border-width: 15px;
             border-color: #e87e0c transparent transparent transparent;
             line-height: 0px;
             _border-color: #e87e0c #000000 #000000 #000000;
             _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
             opacity: 0.3;
-            bottom: -35px;
+            bottom: -30px;
             left: 0;
+            display: block;
         }//after
 }//.phase
-    .phase h4{//step
-            font:{
-                family: $gothic;
-                size: 2.4em;
-            }
-            color: $orange;
-            text-align: center;
-            position: absolute;
-            top: 15%;
-            left: 15px;
-            span{//STEP
-                font:{
-                    size: 40%;
-                    weight: bold;
-                }
-                letter-spacing: .13em;
-                &:after{//改行
-                    content: "\A";
-                    white-space: pre;
-                }
-            }
-        }//h4
-    .phase dl{//説明
-            width: 640px;
-            padding: 40px;
-            position: relative;
-            font-family: $gothic;
-            dt{
-                font:{
-                    size: 1.5em;
-                    weight: bold;
-                }
-                color: $black;
-                padding-left: 60px;
-                &:before{
-                    content: "";
-                    position: absolute;
-                    top: 25px;
-                    left: 0;
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                    background: $orange;
-                    margin-left: 40px;
-                }//dt:before
-            }//.dt
-            dd{
-                color: $gray;
-                font-size: 0.9em;
-                padding: 30px;
-                line-height: 2;
-                letter-spacing: .07em;
-            }//dd
-        }//dl
-.phase dl{//step2
-    position: relative;
-    .count{//カウンター関数
-        &:before{
-            counter-increment: count;
-            content: counter(count);
-            position: absolute;
-            color: #fff;
-            text-align: center;
-            line-height: 2;
-        }//.count:before
-    }//.count
-}//.phase dl
 
+.phase h4{//STEP
+        font:{
+            family: $gothic;
+            size: .3em;
+        }
+        color: $orange;
+        text-align: center;
+        position: absolute;
+        top: 15%;
+        left: 1%;
+        span{//no.
+            font:{
+                size: 30%;
+                weight: bold;
+            }
+            &:after{//改行
+                content: "\A";
+                white-space: pre;
+            }
+        }
+    }//h4
+
+.phase dl{//説明
+        width: 85%;
+        position: relative;
+        font-family: $gothic;
+        padding: 35px 0 0;
+        dt{
+            font:{
+                size: .7em;
+                weight: bold;
+            }
+            color: $black;
+            text-indent: 4.2em;
+            &:before{//丸
+                content: "";
+                position: absolute;
+                top: 20px;
+                left: 5px;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background: $orange;
+            }//dt:before
+        }//.dt
+        dd{
+            width: 85%;
+            color: $gray;
+            font-size: .85em;
+            line-height: 2;
+            letter-spacing: .01em;
+            padding: 20px 0 0;
+            margin-left: auto;
+        }//dd
+    }//dl
+
+.phase .phase-wrap {
+    width: 85%;
+    dl{//step2
+        position: relative;
+        .count{//カウンター関数
+            &:before{
+                counter-increment: count;
+                content: counter(count);
+                position: absolute;
+                color: #fff;
+                font-size: 2em;
+                line-height: 1.4;
+                text-indent: .5em;
+            }//.count:before
+        }//.count
+    }//.phase dl
+}
+
+.married img{
+    width: 90%;
+    display: block;
+    padding-bottom: 50px;
+    margin: 0 auto 50px;
+    & + img{
+        border-bottom: 1px solid #e6e6e6;
+    }
+}
 //-------------------------married.html----------------------------//
 
 //-------------------------price.html----------------------------//
 
 .kv3{
-    background: url(../images/header3.jpg) no-repeat;
+    background: url(../images/header3@2x.jpg) no-repeat;
     background-size: cover;
-    min-height: 100vh;
-    margin-bottom: 95px;
+    height: 254.5px;
     .lede3{//h2
-        color: $black;
-        opacity: 0.5;
+        color: #fff;
     }
 }
 
 .price{//main
-    max-width: 1200px;
-    margin: 95px auto;
+    margin: 30px auto;
     font-family: $gothic;
     h3{
         width: 100%;
         position: relative;
         text-align: center;
         display: inline-block;
-        margin-bottom: 95px;
+        margin-bottom: 30px;
         color: $black;
         font:{ 
-            size: 2em;
+            size: 1em;
         }
 //        以下で線を表示
         &:before{
@@ -726,7 +693,6 @@ main{
 .price dl{//料金dl
     width: 90%;
     display: flex;
-    justify-content: space-between;
     flex-flow: wrap;
     letter-spacing: .09em;
     border: 1px solid $orange;
@@ -735,24 +701,37 @@ main{
     dt{
         width: 100%;
         display: flex;
-        align-items: baseline;
-        font-size: 2em;
+        flex-flow: wrap;
+        align-items: flex-end;
+        font-size: .8em;
         color: #fff;
         background: $orange;
-        padding: 20px;
+        padding: .8em 0 .8em 5px;
+        margin: 0 auto;
         position: relative;
-        strong{
-            padding-left: 60px;
-            font:{
-                size: 1.3em;
-                weight: bold;
+        div{
+            width: 60%;
+            margin-left: auto;
+            strong{
+                font:{
+                    size: 2.2em;
+                    weight: bold;
+                }
+            }//strong
+            span{
+                font-size: 1em;
+                font-weight: bold;
+            }//span   
+        }
+        .pre{
+            margin: 0 70px 0 auto;
+            &:before{
+                content: "\A";
+                white-space: pre;
             }
-          }//strong
-        span{
-            font-size: 0.6em;
-            font-weight: bold;
-        }//span
+        }
         .button{
+            height: 65px;
             display: block;
             border: none;
             cursor: pointer;
@@ -760,12 +739,11 @@ main{
             appearance: none;
             color: $orange;
             background: #fff;
-            font-size: 0.6em;
+            font-size: 1em;
             letter-spacing: .2em;
             position: absolute;
-            bottom: 0;
+            top: 0;
             right: 0;
-            padding: 0.5em 60px;
             &:after{
                 font-family: 'FontAwesome';
                 content: '\f0fe';
@@ -787,11 +765,12 @@ main{
             color: $black;
             background: #fff;
             border: 1px solid $orange;
-            padding: 40px;
+            padding: 1em 0;
             text-align: center;
-            font-size: 1.5em;
+            font-size: .8em;
             div{
-                padding: 0 50px;
+                width: 40%;
+                margin: 0 auto;
                 line-height: 2;
                 span{//税込
                     display: block;
@@ -800,17 +779,17 @@ main{
                 }//span
                 strong{//税抜
                     display: block;
-                    font-size: 1.5em;
+                    font-size: 1.8em;
                     color: $orange;
                     line-height: 1;
                     span{//税抜円
                         display: inline;
-                        font-size: 0.6em;
+                        font-size: 0.5em;
                     }//span
                 }//strong
             }//div
         .plus2{
-                font-size: 2em;
+                font-size: 1.5em;
                 color: $gray;
                 opacity: 0.5;
             }//.plus2
@@ -820,43 +799,51 @@ main{
 .price .marriage{//成婚料
         width: 90%;
         display: flex;
-        justify-content: flex-start;
+        flex-direction: row;
         align-items: center;
-        margin-bottom: 95px;
-        dt{//成婚料
-            width: 25%;
-            display: inline-block;
-        }//dt
+        justify-content: flex-start;
+        padding: .8em 0 .8em 5px;
+        margin-bottom: 30px;
+        dt{
+            width: 15%;
+        }
         dd{//税込
-            width: 50%;
+            width:85%;
             display: inline-block;
-            text-align: left;
             color: #fff;
             background: $orange;
-            font-size: 1.3em;
+            font-size: .8em;
             strong{//税抜
+                margin-left: auto;
                 font-size: 2em;
                 font-weight: bold;
+            }
+            span{
+                display: block;
+                &:before{
+                    content: "\A";
+                    white-space: pre;
+                }
             }
     }//dd
 }//.price .marriage
 
 .price section > div{//会費説明
     color: $black;
-    width: 100%;
+    width: 90%;
     text-align: center;
-    margin-bottom: 95px;
+    margin: 0 auto 30px;
     line-height: 2;
     h4{
-        font-size: 2em;
+        font-size: 1em;
     }
 }
 
 .price ul{//入会資格
-    width: 100%;
+    width: 90%;
     text-align: center;
-    margin-bottom: 95px;
-    font-size: 1.2em;
+    margin: 0 auto 30px;
+    font-size: .8em;
     font-weight: bold;
     line-height: 2;
     letter-spacing: .09em;
@@ -872,11 +859,11 @@ main{
         display: flex;
         justify-content: center;
         flex-flow: wrap;
-        margin: 0 auto 95px;
+        margin: 0 auto 30px;
         li{
             width: 100%;
             text-align: left;
-            font-size: 1.2em;
+            font-size: .8em;
             font-weight: bold;
             color: $red;
             opacity: 0.6;
@@ -895,6 +882,7 @@ main{
 
 .price{//個人情報保護方針へのリンク
     div{
+        font-size: .8em;
         .privacy{//a
             color: $black;
             .right{//矢印
@@ -909,15 +897,15 @@ main{
 
 //-------------------------company.html--------------------------//
 .company{//main
-    width: 980px;
-    margin: 175px auto 0;
+    width: 90%;
+    margin: 30px auto;
     section{//会社概要
-        margin-bottom: 95px;
+        margin-bottom: 30px;
         text-align: left;
     .tit{//タイトル
         color: $black;
         font-family: $gothic;
-        font-size: 1.5em;
+        font-size: 1em;
         font-weight: bold; 
         margin-bottom: 30px;
         }//.tit
@@ -927,7 +915,7 @@ main{
 .company{//会社概要   
         table{
             tr{
-                width: 980px;
+                width: 100%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
@@ -935,14 +923,14 @@ main{
                 border: 1px solid #fff;
                 background: #e4e4e4;
                 th{
-                    width: 200px;
-                    font-size: 1.2em;
-                    padding: 20px;
+                    width: 25%;
+                    font-size: 1em;
+                    padding: 10px;
                 }//th
                 td{
-                    width: 980px - 200px;
+                    width: 75%;
                     background: #f3f8f8;
-                    padding: 20px;
+                    padding: 10px;
                     line-height: 1.5;
                 }//td
             }//tr
@@ -951,10 +939,17 @@ main{
 
 .company{
     figure{
-        margin: 0 auto 95px;
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        overflow: hidden;
         iframe{
-            width: 980px;
-            height: 450px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     }
 }
@@ -966,7 +961,7 @@ main{
 
 
 .enquiry{//main
-    margin-top: 175px;
+    margin-top: 30px;
     width: 100%;
     h2{//タイトル
         width: 1024px;
@@ -1121,23 +1116,24 @@ form{
 //-------------------------privacy.html--------------------------//
 
 .privacy{//main
-    width: 980px;
-    margin: 175px auto 95px;
+    width: 90%;
+    margin: 30px auto;
     line-height: 1.5;
     h2{//タイトル
         text-align: left;
-        font-size: 1.5em;
+        font-size: 1em;
         font-weight: bold;
-        margin: 0 auto 95px;
+        margin: 0 auto 30px;
     }//h2
     h3{
         color: $blue;
-        font-size: 1.2em;
+        font-size: 1em;
         font-weight: bold;
-        margin: 0 auto 35px;
+        margin: 0 auto 10px;
     }
     p{
-        margin-bottom: 35px;
+        font-size: .8em;
+        margin-bottom: 10px;
         letter-spacing: .05em;
     }
     h4{
@@ -1152,6 +1148,7 @@ form{
 .privacy .policy{
     counter-reset: privacy;
     li{
+        font-size: .8em;
         color: $black;
         padding-left: 2em;
         text-indent: -2em;
@@ -1170,10 +1167,12 @@ form{
 }
 .privacy dl{
     margin-bottom: 35px;
+    font-size: .8em;
 }
 .privacy .security{
     counter-reset: security;
     li{
+        font-size: .9em;
         color: $orange;
         &:before{
             counter-increment: security;
@@ -1186,5 +1185,9 @@ form{
         color: $black;
         margin-top: 10px;
     }
+}
+
+.privacy .last{
+	font-size: .7em;
 }
 //-------------------------privacy.html--------------------------//
