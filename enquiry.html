@@ -36,17 +36,6 @@
                     </nav><!--gnav-->
             </div>
             </header><!--#header-->
-            
-               <section class="menu">
-                <ul>
-                    <li><a href="http://jmsk.tokyo/contact/"><h3>ご成婚までの流れ</h3><img src="images/counseling.jpg" width="270" height="178" alt="ご成婚までの流れ"></a></li>
-                    <li><a href="http://jmsk.tokyo/siryoseikyu/"><h3>資料請求</h3><img src="images/shiryoseikyu.jpg" width="270" height="178" alt="資料請求"></a></li>
-                    <li><a href="http://jmsk.tokyo/ryoukin/"><h3>料金プラン</h3><img src="images/price.png" width="270" height="178" alt="料金プラン"></a></li>
-                    <li><a href="http://jmsk.tokyo/2017/11/27/party2017_12_16/"><h3>婚活パーティー</h3><img src="images/party.jpg" width="270" height="178" alt="婚活パーティー"></a></li>
-                    <li><a href="http://jmsk.tokyo/married/"><h3>ご成婚までの流れ</h3><img src="images/wedding.jpg" width="270" height="178" alt="ご成婚までの流れ"></a></li>
-                    <li><a href="http://jmsk.tokyo/blog/"><h3>ブログ</h3><img src="images/blog.jpg" width="270" height="178" alt="ブログ"></a></li>
-                </ul>
-            </section>
         <div class="container">           
             <main class="enquiry">
              <h2>資料請求・お問い合わせ</h2>
@@ -55,16 +44,14 @@
                     <dl>
                         <dt>お問い合わせ項目<strong>必須</strong></dt>
                         <dd>
-                            <div>
-                                <label for="enquiry" class="radio">
-                                    <input class="radiobutton" type="radio" id="enquiry" name="enquiry">
+                                <label for="enquiry" class="check">
+                                    <input type="checkbox" id="enquiry" name="enquiry" value="資料請求">
                                     資料請求
                                 </label>
-                                <label for="contact" class="radio">
-                                    <input class="radiobutton" type="radio" id="contact" name="contact">
+                                <label for="contact" class="check">
+                                    <input type="checkbox" id="contact" name="contact" value="お問い合わせ">
                                     お問い合わせ
                                 </label>
-                            </div>
                         </dd>
                     </dl>
                      <dl>
@@ -76,40 +63,40 @@
                          </dd>
                      </dl>
                      <dl>
-                        <dt>お名前（漢字）<strong>必須</strong></dt>
+                        <dt>お名前<strong>必須</strong></dt>
                         <dd>
                         <div class="inputname">
-                            <label class="name" for="lastname">姓</label>
-                            <span><input type="text" id="lastname"></span>
-                            <label class="name" for="firstname">名</label>
-                            <span><input type="text" id="firstname"></span>
+                            <label class="name" for="lastname"></label>
+                            <span><input type="text" id="lastname" placeholder="姓"></span>
+                            <label class="name" for="firstname"></label>
+                            <span><input type="text" id="firstname" placeholder="名"></span>
                         </div>
                         </dd>                     
                      </dl>
                      <dl>
-                         <dt>フリガナ（全角カナ）<strong>必須</strong></dt>
+                         <dt>フリガナ<strong>必須</strong></dt>
                          <dd>
                         <div class="inputname">
-                             <label class="name" for="lastnamePhonetic">セイ</label>
-                             <span><input type="text" id="lastnamePhonetic"></span>
-                             <label class="name" for="firstnamePhonetic">メイ</label>
-                             <span><input type="text" id="firstnamePhonetic"></span>
+                             <label class="name" for="lastnamePhonetic"></label>
+                            <span><input type="text" id="lastnamePhonetic" placeholder="セイ"></span>
+                             <label class="name" for="firstnamePhonetic"></label>
+                            <span><input type="text" id="firstnamePhonetic" placeholder="メイ"></span>
                          </div>
                          </dd>
                      </dl>
                      <dl>
-                        <dt>メールアドレス<br>（半角英数字）<strong>必須</strong></dt>
+                        <dt>メールアドレス<strong>必須</strong></dt>
                         <dd>
                         <div>
-                            <input type="text" value="" id="email"> 
+                            <input type="text" value="" id="email" placeholder="user@example.com"> 
                         </div>    
                         </dd>
                     </dl>       
                     <dl>
-                        <dt>メールアドレス（確認）</dt>
+                        <dt>メールアドレス（確認）<strong>必須</strong></dt>
                         <dd>
                         <div>
-                            <input type="text" value="" id="email_check">
+                            <input type="text" value="" id="email_check" placeholder="user@example.com">
                         </div>
                         </dd>
                     </dl>
@@ -125,12 +112,12 @@
                  <fieldset class="form2">
                     <p>資料請求ご希望の方は下記にご記入お願いいたします。</p>
                     <dl>
-                        <dt>電話番号<br>（半角数字）</dt>
+                        <dt>電話番号</dt>
                         <dd>
                             <div class="tel">
                                 <div>
                                     <div>
-                                        <input type="tel" name="tel1" value="">
+                                        <input type="tel" name="tel1" value="" placeholder="000">
                                     </div>
                                 </div>
                                 <div class="hyphen">
@@ -138,7 +125,7 @@
                                 </div>
                                 <div>
                                     <div>
-                                        <input type="tel" name="tel2" value="">
+                                        <input type="tel" name="tel2" value="" placeholder="000">
                                     </div>
                                 </div>
                                 <div class="hyphen">
@@ -146,28 +133,28 @@
                                 </div>
                                 <div>
                                     <div>
-                                        <input type="tel" name="tel3" value="">
+                                        <input type="tel" name="tel3" value="" placeholder="000">
                                     </div>
                                 </div>
                             </div>
                         </dd>
                     </dl>
                     <dl>
-                        <dt>郵便番号<br>（半角数字）<strong>必須</strong></dt>
+                        <dt>郵便番号<strong>必須</strong></dt>
                         <dd class="postalcode">
                             <div class="code">
-                            <input type="text" value="" id="postalcode"> 
+                                <input type="text" value="" id="postalcode" placeholder="000">
                             </div>
                             <div class="code">
                             <span class="separate">-</span>
                             </div>
                             <div class="code">
-                            <input class="c-form__inputTextItem" type="text" name="EU_ZIP2" value="">
+                                <input type="text" value="" id="postalcode" placeholder="000">
                             </div>
                         </dd>
                     </dl>
                     <dl>
-                        <dt>住所<br>（全角）<strong>必須</strong></dt>
+                        <dt>住所<strong>必須</strong></dt>
                         <dd>
                             <div>
                                 <label class="adress" for="state">
@@ -224,16 +211,13 @@
                                 </label>
                             </div>
                             <div>
-                                <input type="text" value="" id="city">
-                                <p>市区町村（例）豊島区</p> 
+                                <input type="text" value="" id="city" placeholder="市区町村（例）豊島区">
                             </div>
                             <div>
-                                <input type="text" value="" id="street">
-                                <p>番地など（例）東池袋3-1-4</p>
+                                <input type="text" value="" id="street" placeholder="番地など（例）東池袋3-1-4">
                             </div>
                             <div>
-                                <input type="text" value="" id="street2">
-                                <p>建物名など（例）メゾンサンシャイン805号</p>
+                                <input type="text" value="" id="street2" placeholder="建物名など（例）メゾンサンシャイン805号">
                             </div>
                         </dd>
                     </dl>

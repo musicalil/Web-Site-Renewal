@@ -1086,7 +1086,7 @@ main .main2 ul li div .m3 {
 }
 
 .enquiry h2 {
-  width: 1024px;
+  width: 1020px;
   text-align: left;
   font-size: 1.5em;
   font-weight: bold;
@@ -1114,7 +1114,7 @@ form fieldset dl dt {
   width: 25%;
   background: #f5f5f5;
   border: 1px solid #ccc;
-  padding: 0 24px;
+  padding: 24px;
   vertical-align: top;
 }
 
@@ -1132,7 +1132,7 @@ form fieldset dl dd {
   color: #4c4c4c;
 }
 
-.enquiry form fieldset .radio {
+.enquiry form fieldset .check {
   margin-right: 5px;
   position: relative;
   vertical-align: middle;
@@ -1141,27 +1141,44 @@ form fieldset dl dd {
   cursor: pointer;
 }
 
-.enquiry form fieldset .radio:before {
+.enquiry form fieldset .check:before {
   position: absolute;
   content: "";
+  display: block;
+  top: 50%;
+  left: 5px;
+  margin-top: -5px;
+  width: 5px;
+  height: 5px;
+  opacity: 0;
+  background: #fff;
+}
+
+.enquiry form fieldset .check:after {
+  position: absolute;
+  content: "";
+  display: block;
   top: 50%;
   left: 0;
-  margin-top: -9px;
-  width: 14px;
-  height: 14px;
-  background: #fff;
+  margin-top: -10px;
+  width: 15px;
+  height: 15px;
   border: 1px solid #ccc;
-  border-radius: 100%;
+  background: #fff;
+}
+
+.enquiry form fieldset .check input[type="checkbox"] {
+  display: none;
+}
+
+.enquiry form fieldset .check input[type="checkbox"]:checked + .check:before {
+  opacity: 1;
 }
 
 .enquiry form fieldset dl .postalcode {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.enquiry form fieldset dl dd .radiobutton {
-  display: none;
 }
 
 .enquiry form fieldset dl dd textarea {
